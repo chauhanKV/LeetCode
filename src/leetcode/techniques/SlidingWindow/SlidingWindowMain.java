@@ -11,5 +11,9 @@ public class SlidingWindowMain {
         MaximumPointsFromCards maximumPointsFromCards = new MaximumPointsFromCards();
         var maxScore = maximumPointsFromCards.maxScore(new int[] {1,2,3,4,5,6,1}, 3);
         System.out.println("Max score from Cards is : "+ maxScore);
+
+        PermutationInString permutationInString = new PermutationInString();
+        var exists = permutationInString.checkInclusion("ab", "eidbaooo");
+        System.out.println("Permutation in string : " + exists);
     }
 }
