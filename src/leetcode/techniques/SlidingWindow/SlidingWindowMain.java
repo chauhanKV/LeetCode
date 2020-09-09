@@ -15,5 +15,9 @@ public class SlidingWindowMain {
         PermutationInString permutationInString = new PermutationInString();
         var exists = permutationInString.checkInclusion("ab", "eidbaooo");
         System.out.println("Permutation in string : " + exists);
+
+        GrumpyBookStore grumpyBookStore = new GrumpyBookStore();
+        var customers = grumpyBookStore.maxSatisfied(new int[]{1,0,1,2,1,1,7,5}, new int[]{0,1,0,1,0,1,0,1}, 4);
+        System.out.println("Satisfied Customers are : " + customers);
     }
 }

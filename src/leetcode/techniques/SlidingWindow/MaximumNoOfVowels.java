@@ -6,7 +6,6 @@ public class MaximumNoOfVowels {
     public int maxVowels(String s, int k) {
         int maxVowels = Integer.MIN_VALUE;
         int currentRunningSum = 0;
-        //var vowels = Set.of('a', 'e', 'i', 'o', 'u');
         char[] inputCharArray = s.toCharArray();
 
         for(int i = 0 ; i < inputCharArray.length; i++)
@@ -31,6 +30,7 @@ public class MaximumNoOfVowels {
     }
 
     private boolean isVowel( char ch ) {
-        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+        String str = "aeiou";
+        return str.indexOf(ch) != -1;
     }
 }
