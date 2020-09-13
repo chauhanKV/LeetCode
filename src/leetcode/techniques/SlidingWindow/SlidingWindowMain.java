@@ -25,5 +25,9 @@ public class SlidingWindowMain {
         SlidingWindowMaximum slidingWindowMaximum = new SlidingWindowMaximum();
         var maxSliding = slidingWindowMaximum.maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7}, 3);
         System.out.println("Sliding Window Maximum is : " + Arrays.toString(maxSliding));
+
+        LongestContinousSubarray longestContinousSubarray = new LongestContinousSubarray();
+        var maxSubarrayLength = longestContinousSubarray.longestSubarray(new int[]{10,1,2,4,7,2}, 5);
+        System.out.println("Longest Continous Subarray is : " + maxSubarrayLength);
     }
 }
