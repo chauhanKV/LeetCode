@@ -29,5 +29,9 @@ public class SlidingWindowMain {
         LongestContinousSubarray longestContinousSubarray = new LongestContinousSubarray();
         var maxSubarrayLength = longestContinousSubarray.longestSubarray(new int[]{10,1,2,4,7,2}, 5);
         System.out.println("Longest Continous Subarray is : " + maxSubarrayLength);
+
+        LongestRepeatingCharacterReplacement longestReplacement = new LongestRepeatingCharacterReplacement();
+        var longestChar = longestReplacement.characterReplacement("AABABBADDDDADADD", 2);
+        System.out.println("Longest repeating character replacement : " + longestChar);
     }
 }
