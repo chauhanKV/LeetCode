@@ -33,5 +33,9 @@ public class SlidingWindowMain {
         LongestRepeatingCharacterReplacement longestReplacement = new LongestRepeatingCharacterReplacement();
         var longestChar = longestReplacement.characterReplacement("AABABBADDDDADADD", 2);
         System.out.println("Longest repeating character replacement : " + longestChar);
+
+        MaxConsecutiveOnesIII maxConsecutiveOnesIII = new MaxConsecutiveOnesIII();
+        var maxOnes = maxConsecutiveOnesIII.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2);
+        System.out.println("Max Consecutive Ones III is : " + maxOnes);
     }
 }
