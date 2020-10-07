@@ -37,5 +37,9 @@ public class SlidingWindowMain {
         MaxConsecutiveOnesIII maxConsecutiveOnesIII = new MaxConsecutiveOnesIII();
         var maxOnes = maxConsecutiveOnesIII.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2);
         System.out.println("Max Consecutive Ones III is : " + maxOnes);
+
+        LongestSubstringWithoutRepeatingCharacters longestString = new LongestSubstringWithoutRepeatingCharacters();
+        var longestNonRepeatingChars = longestString.lengthOfLongestSubstring("aab");
+        System.out.println("Longest Substring without Repeating Characters : " + longestNonRepeatingChars);
     }
 }
