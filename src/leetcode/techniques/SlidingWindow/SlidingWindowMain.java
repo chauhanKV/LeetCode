@@ -41,5 +41,9 @@ public class SlidingWindowMain {
         LongestSubstringWithoutRepeatingCharacters longestString = new LongestSubstringWithoutRepeatingCharacters();
         var longestNonRepeatingChars = longestString.lengthOfLongestSubstring("aab");
         System.out.println("Longest Substring without Repeating Characters : " + longestNonRepeatingChars);
+
+        LongestSubstringWithKDistinctCharacters kDistinctCharacters = new LongestSubstringWithKDistinctCharacters();
+        var distinctChar = kDistinctCharacters.LongestSubstring("aabacbebebe", 2);
+        System.out.println("Longest string with K distinct character: " + distinctChar);
     }
 }
