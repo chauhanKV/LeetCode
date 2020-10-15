@@ -45,5 +45,9 @@ public class SlidingWindowMain {
         LongestSubstringWithKDistinctCharacters kDistinctCharacters = new LongestSubstringWithKDistinctCharacters();
         var distinctChar = kDistinctCharacters.LongestSubstring("aabacbebebe", 2);
         System.out.println("Longest string with K distinct character: " + distinctChar);
+
+        LongestSubstringWithTwoDistinctCharacters twoDistinctCharacters = new LongestSubstringWithTwoDistinctCharacters();
+        var distinct2Char = twoDistinctCharacters.lengthOfLongestSubstringTwoDistinct("aaa");
+        System.out.println("Longest sustring with 2 distinct characters: " + distinct2Char);
     }
 }
