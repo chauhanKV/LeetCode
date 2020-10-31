@@ -2,7 +2,7 @@ package leetcode.techniques.SlidingWindow;
 
 import java.util.HashSet;
 import java.util.Set;
-
+// Solve more questions like these. check solution section for similar question suggestions from comments
 public class LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
         if (s.length() == 0) return 0;

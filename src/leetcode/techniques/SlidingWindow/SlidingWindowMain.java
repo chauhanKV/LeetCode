@@ -49,5 +49,13 @@ public class SlidingWindowMain {
         LongestSubstringWithTwoDistinctCharacters twoDistinctCharacters = new LongestSubstringWithTwoDistinctCharacters();
         var distinct2Char = twoDistinctCharacters.lengthOfLongestSubstringTwoDistinct("aaa");
         System.out.println("Longest sustring with 2 distinct characters: " + distinct2Char);
+
+        MinimumSizeSubArraySum minimumSizeSubArraySum = new MinimumSizeSubArraySum();
+        var minArraySize = minimumSizeSubArraySum.minSubArrayLen(7, new int[]{2,3,1,2,4,3});
+        System.out.println("Minimum Size SubArray Sum is : " + minArraySize);
+
+        MaximumSizeSubArraySizeEqualsK maxSubArray = new MaximumSizeSubArraySizeEqualsK();
+        var maxArraySize = maxSubArray.maxSubArrayLenEqualsK(7, new int[]{2,3,1,2,4,3});
+        System.out.println("Maximum Size SubArray Sum equals to K is : " + maxArraySize);
     }
 }
