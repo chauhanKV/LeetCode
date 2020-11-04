@@ -57,5 +57,12 @@ public class SlidingWindowMain {
         MaximumSizeSubArraySizeEqualsK maxSubArray = new MaximumSizeSubArraySizeEqualsK();
         var maxArraySize = maxSubArray.maxSubArrayLenEqualsK(7, new int[]{2,3,1,2,4,3});
         System.out.println("Maximum Size SubArray Sum equals to K is : " + maxArraySize);
+
+        FindAllAnagramsInString anagramsInString = new FindAllAnagramsInString();
+        anagramsInString.findAnagrams("aebdcdefabc", "abc");
+
+        NumberOfSubsequenceThatSatisfyGivenCondition subsequence = new NumberOfSubsequenceThatSatisfyGivenCondition();
+        var subsequenceCount = subsequence.numSubseq(new int[]{2,3,3,4,6,7},12 );
+        System.out.println("Number of subsequences that satisfy given sum condition are : " + subsequenceCount);
     }
 }
