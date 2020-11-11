@@ -1,36 +1,31 @@
 package leetcode.techniques.SlidingWindow;
 
+import java.util.Arrays;
+
 public class NumberOfSubsequenceThatSatisfyGivenCondition {
     public int numSubseq(int[] nums, int target) {
 
         if(nums == null || nums.length <= 0) return 0;
 
-        int minValue = 0;
-        int maxValue = 0;
+        Arrays.sort(nums);
         int start = 0;
-        int end = 0;
+        int end = nums.length - 1;
+        int runningSum;
         int subsequenceCount = 0;
+        int modulo = 1000000007;
 
-        while(end < nums.length)
+        while(end < nums.length && end >= 0 && start < nums.length)
         {
-            minValue = Math.min(nums[start], minValue);
-            maxValue = Math.max(nums[end], maxValue);
+            runningSum = nums[start] + nums[end];
 
-            if(minValue + maxValue <= target)
-            {
-                subsequenceCount++;
-            }
-
-            if(start != end && nums[start] == nums[end])
-            {
+            if(runningSum <= target) {
+                subsequenceCount += (Math.pow(2, (end - start)) % modulo);
                 start++;
             }
             else
-            {
-                end++;
-            }
+                end--;
         }
 
-        return subsequenceCount;
+        return subsequenceCount ;
     }
 }

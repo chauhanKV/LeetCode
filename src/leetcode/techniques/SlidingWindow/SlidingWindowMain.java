@@ -62,7 +62,7 @@ public class SlidingWindowMain {
         anagramsInString.findAnagrams("aebdcdefabc", "abc");
 
         NumberOfSubsequenceThatSatisfyGivenCondition subsequence = new NumberOfSubsequenceThatSatisfyGivenCondition();
-        var subsequenceCount = subsequence.numSubseq(new int[]{2,3,3,4,6,7},12 );
+        var subsequenceCount = subsequence.numSubseq(new int[]{7, 10, 7, 3, 7, 5,4},12 );
         System.out.println("Number of subsequences that satisfy given sum condition are : " + subsequenceCount);
     }
 }
