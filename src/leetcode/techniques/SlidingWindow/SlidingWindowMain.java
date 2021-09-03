@@ -1,6 +1,7 @@
 package leetcode.techniques.SlidingWindow;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class SlidingWindowMain {
     public static void main(String[] args) {
@@ -31,7 +32,7 @@ public class SlidingWindowMain {
         System.out.println("Longest Continous Subarray is : " + maxSubarrayLength);
 
         LongestRepeatingCharacterReplacement longestReplacement = new LongestRepeatingCharacterReplacement();
-        var longestChar = longestReplacement.characterReplacement("AABABBADDDDADADD", 2);
+        var longestChar = longestReplacement.characterReplacement("AAABCCD", 2);
         System.out.println("Longest repeating character replacement : " + longestChar);
 
         MaxConsecutiveOnesIII maxConsecutiveOnesIII = new MaxConsecutiveOnesIII();
@@ -45,6 +46,10 @@ public class SlidingWindowMain {
         LongestSubstringWithKDistinctCharacters kDistinctCharacters = new LongestSubstringWithKDistinctCharacters();
         var distinctChar = kDistinctCharacters.LongestSubstring("aabacbebebe", 2);
         System.out.println("Longest string with K distinct character: " + distinctChar);
+
+        LongestSubstringWithKDistinctCount kDistinctCount = new LongestSubstringWithKDistinctCount();
+        var distinctCount = kDistinctCount.findLength("aabacbebebe", 2);
+        System.out.println("Longest string with K distinct Count: " + distinctCount);
 
         LongestSubstringWithTwoDistinctCharacters twoDistinctCharacters = new LongestSubstringWithTwoDistinctCharacters();
         var distinct2Char = twoDistinctCharacters.lengthOfLongestSubstringTwoDistinct("aaa");
@@ -64,5 +69,9 @@ public class SlidingWindowMain {
         NumberOfSubsequenceThatSatisfyGivenCondition subsequence = new NumberOfSubsequenceThatSatisfyGivenCondition();
         var subsequenceCount = subsequence.numSubseq(new int[]{7, 10, 7, 3, 7, 5,4},12 );
         System.out.println("Number of subsequences that satisfy given sum condition are : " + subsequenceCount);
+
+        SubstringwithConcatenationOfAllWords concatenation = new SubstringwithConcatenationOfAllWords();
+        List<Integer> result = concatenation.findWordConcatenation("wordgoodgoodgoodbestword", new String[] { "word","good","best","word" });
+        System.out.println("Substring with Concatenation Of All Words : " + result);
     }
 }

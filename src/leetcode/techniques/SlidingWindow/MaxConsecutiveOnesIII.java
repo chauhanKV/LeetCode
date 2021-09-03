@@ -29,3 +29,34 @@ public class MaxConsecutiveOnesIII {
         return longestSubArray;
     }
 }
+
+
+// Different solution
+//class ReplacingOnes {
+//    public static int findLength(int[] arr, int k) {
+//        int zeroCount = 0;
+//        int start = 0;
+//        int maxLength = 0;
+//
+//        for(int end = 0; end < arr.length; end++)
+//        {
+//            if(arr[end] == 0)
+//            {
+//                zeroCount++;
+//            }
+//
+//            if(zeroCount > k)
+//            {
+//                if(arr[start] == 0)
+//                {
+//                    zeroCount--;
+//                }
+//                start++;
+//            }
+//
+//            maxLength = Math.max((end - start) + 1, maxLength);
+//        }
+//
+//        return maxLength;
+//    }
+//}
