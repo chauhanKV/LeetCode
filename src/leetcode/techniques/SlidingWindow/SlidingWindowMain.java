@@ -71,7 +71,7 @@ public class SlidingWindowMain {
         System.out.println("Number of subsequences that satisfy given sum condition are : " + subsequenceCount);
 
         SubstringwithConcatenationOfAllWords concatenation = new SubstringwithConcatenationOfAllWords();
-        List<Integer> result = concatenation.findWordConcatenation("wordgoodgoodgoodbestword", new String[] { "word","good","best","word" });
+        List<Integer> result = concatenation.findWordConcatenation("lingmindraboofooowingdingbarrwingmonkeypoundcake", new String[] { "fooo","barr","wing","ding","wing" });
         System.out.println("Substring with Concatenation Of All Words : " + result);
     }
 }
