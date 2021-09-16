@@ -73,5 +73,9 @@ public class SlidingWindowMain {
         SubstringwithConcatenationOfAllWords concatenation = new SubstringwithConcatenationOfAllWords();
         List<Integer> result = concatenation.findWordConcatenation("lingmindraboofooowingdingbarrwingmonkeypoundcake", new String[] { "fooo","barr","wing","ding","wing" });
         System.out.println("Substring with Concatenation Of All Words : " + result);
+
+        MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
+        int res = minimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC");
+        System.out.println("Minimum Window substring : " + res);
     }
 }
