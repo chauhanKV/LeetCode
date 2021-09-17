@@ -3,12 +3,16 @@ import java.util.*;
 
 public class MinimumWindowSubstring {
 
-    public int minWindow(String s, String t) {
+    public String minWindow(String s, String t) {
+        if(s.length() == 0 && t.length() == 0) return "";
+        if(s.length() < t.length()) return "";
+
         HashMap<Character, Integer> charOccurance = new HashMap<>();
         int start = 0;
         int end = 0;
         int matchCount = 0;
         int minLength = Integer.MAX_VALUE;
+        String window = "";
 
         for(int i = 0 ; i < t.length(); i++)
         {
@@ -17,10 +21,10 @@ public class MinimumWindowSubstring {
 
         while(end < s.length())
         {
-            if(charOccurance.containsKey(t.charAt(end)))
+            if(charOccurance.containsKey(s.charAt(end)))
             {
-                charOccurance.put(t.charAt(end), charOccurance.getOrDefault(t.charAt(end), 0) + 1);
-                if(charOccurance.get(t.charAt(end)) >= 0)
+                charOccurance.put(s.charAt(end), charOccurance.getOrDefault(s.charAt(end), 0) - 1);
+                if(charOccurance.get(s.charAt(end)) >= 0)
                 {
                     matchCount++;
                 }
@@ -28,20 +32,25 @@ public class MinimumWindowSubstring {
 
             while(matchCount == t.length())
             {
-                if(charOccurance.containsKey(t.charAt(start)))
+                if(charOccurance.containsKey(s.charAt(start)))
                 {
-                    if(charOccurance.get(t.charAt(start)) == 0)
+                    if(charOccurance.get(s.charAt(start)) == 0)
                     {
                         matchCount--;
                     }
-                    charOccurance.put(t.charAt(end), charOccurance.getOrDefault(t.charAt(start), 0) + 1);
-                }
+                    charOccurance.put(s.charAt(start), charOccurance.getOrDefault(s.charAt(start), 0) + 1);
 
-                minLength = Math.min(minLength, (end - start) + 1);
+                    if(minLength > ((end - start) + 1))
+                    {
+                        minLength = (end - start) + 1;
+                        window = s.substring(start, end + 1);
+                    }
+                }
                 start++;
             }
+            end++;
         }
 
-        return minLength;
+        return window;
     }
 }

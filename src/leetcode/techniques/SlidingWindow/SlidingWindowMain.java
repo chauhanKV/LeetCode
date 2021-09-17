@@ -75,7 +75,7 @@ public class SlidingWindowMain {
         System.out.println("Substring with Concatenation Of All Words : " + result);
 
         MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
-        int res = minimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC");
+        String res = minimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC");
         System.out.println("Minimum Window substring : " + res);
     }
 }
