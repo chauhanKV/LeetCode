@@ -77,5 +77,9 @@ public class SlidingWindowMain {
         MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
         String res = minimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC");
         System.out.println("Minimum Window substring : " + res);
+
+        MaximumAvgSubarrayI maximumAvgSubarrayI = new MaximumAvgSubarrayI();
+        double output = maximumAvgSubarrayI.findMaxAverage(new int[] {1,12,-5,-6,50,3}, 4);
+        System.out.println("Maximum Average Subarray I : " + output);
     }
 }
