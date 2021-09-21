@@ -81,5 +81,9 @@ public class SlidingWindowMain {
         MaximumAvgSubarrayI maximumAvgSubarrayI = new MaximumAvgSubarrayI();
         double output = maximumAvgSubarrayI.findMaxAverage(new int[] {1,12,-5,-6,50,3}, 4);
         System.out.println("Maximum Average Subarray I : " + output);
+
+        SubstringOfSize3WithDistinctCharacters substringOfSize3WithDistinctCharacters = new SubstringOfSize3WithDistinctCharacters();
+        int substrings = substringOfSize3WithDistinctCharacters.countGoodSubstrings("xyzzaz");
+        System.out.println("Substrings of Size Three with Distinct Characters : "+ substrings);
     }
 }
