@@ -2,6 +2,8 @@ package leetcode.techniques.SlidingWindow;
 import java.util.*;
 
 public class SubstringOfSize3WithDistinctCharacters {
+    //Runtime: 2 ms, faster than 49.43% of Java online submissions for Substrings of Size Three with Distinct Characters.
+    //Memory Usage: 37.2 MB, less than 72.25% of Java online submissions for Substrings of Size Three with Distinct Characters.
     public int countGoodSubstrings(String s) {
         HashMap<Character, Integer> valueOccurance = new HashMap<>();
         int start = 0;

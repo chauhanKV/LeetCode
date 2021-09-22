@@ -85,5 +85,9 @@ public class SlidingWindowMain {
         SubstringOfSize3WithDistinctCharacters substringOfSize3WithDistinctCharacters = new SubstringOfSize3WithDistinctCharacters();
         int substrings = substringOfSize3WithDistinctCharacters.countGoodSubstrings("xyzzaz");
         System.out.println("Substrings of Size Three with Distinct Characters : "+ substrings);
+
+        ContainsDuplicateII containsDuplicateII = new ContainsDuplicateII();
+        boolean hasDuplicate = containsDuplicateII.containsNearbyDuplicate(new int[] {1,2,3,1,2,3}, 2);
+        System.out.println("Contains Duplicate? :" + hasDuplicate);
     }
 }

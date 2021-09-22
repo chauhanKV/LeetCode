@@ -1,6 +1,10 @@
 package leetcode.techniques.SlidingWindow;
 
 public class MaximumAvgSubarrayI {
+
+    //Runtime: 7 ms, faster than 18.62% of Java online submissions for Maximum Average Subarray I.
+    //Memory Usage: 116.7 MB, less than 5.01% of Java online submissions for Maximum Average Subarray I.
+    //reduce complexity going forward.
     public double findMaxAverage(int[] nums, int k) {
         double maxAvg = Integer.MIN_VALUE;
         double runningSum = 0;
