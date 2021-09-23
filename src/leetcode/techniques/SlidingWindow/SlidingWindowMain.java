@@ -89,5 +89,9 @@ public class SlidingWindowMain {
         ContainsDuplicateII containsDuplicateII = new ContainsDuplicateII();
         boolean hasDuplicate = containsDuplicateII.containsNearbyDuplicate(new int[] {1,2,3,1,2,3}, 2);
         System.out.println("Contains Duplicate? :" + hasDuplicate);
+
+        SwapForLongestRepeatedCharacterString swap = new SwapForLongestRepeatedCharacterString();
+        int swapped = swap.maxRepOpt1("aaabaaa");
+        System.out.println("Swap For Longest Repeated Character Substring : " + swapped);
     }
 }
