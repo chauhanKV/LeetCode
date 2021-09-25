@@ -2,6 +2,15 @@ package leetcode.techniques.SlidingWindow;
 import java.util.*;
 
 public class FruitsIntoBasket {
+    //Runtime: 115 ms, faster than 10.35% of Java online submissions for Fruit Into Baskets.
+    //Memory Usage: 116.4 MB, less than 6.75% of Java online submissions for Fruit Into Baskets.
+    //Next challenges:
+    //Longest Uncommon Subsequence II
+    //Previous Permutation With One Swap
+    //Can You Eat Your Favorite Candy on Your Favorite Day?
+
+    //Optimize this solution
+
     public int totalFruit(int[] fruits) {
 
         HashMap<Integer, Integer> distinctNumbers = new HashMap<>();
