@@ -1,5 +1,6 @@
 package leetcode.techniques.SlidingWindow;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 
@@ -93,5 +94,9 @@ public class SlidingWindowMain {
         SwapForLongestRepeatedCharacterString swap = new SwapForLongestRepeatedCharacterString();
         int swapped = swap.maxRepOpt1("aaabaaa");
         System.out.println("Swap For Longest Repeated Character Substring : " + swapped);
+
+        FruitsIntoBasket fruitsIntoBasket = new FruitsIntoBasket();
+        int maxSize = fruitsIntoBasket.totalFruit(new int[] {3,3,3,1,2,1,1,2,3,3,4});
+        System.out.println("Maximum fruits into Basket : " + maxSize);
     }
 }
