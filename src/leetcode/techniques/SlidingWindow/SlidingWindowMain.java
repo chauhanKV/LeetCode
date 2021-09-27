@@ -98,5 +98,9 @@ public class SlidingWindowMain {
         FruitsIntoBasket fruitsIntoBasket = new FruitsIntoBasket();
         int maxSize = fruitsIntoBasket.totalFruit(new int[] {3,3,3,1,2,1,1,2,3,3,4});
         System.out.println("Maximum fruits into Basket : " + maxSize);
+
+        SubArrayProductLessThanK subArrayProductLessThanK = new SubArrayProductLessThanK();
+        int ans = subArrayProductLessThanK.numSubarrayProductLessThanK(new int[]{10,5,2,6}, 100);
+        System.out.println("Subarray Product Less Than K : " + ans );
     }
 }
