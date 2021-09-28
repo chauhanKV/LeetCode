@@ -102,5 +102,9 @@ public class SlidingWindowMain {
         SubArrayProductLessThanK subArrayProductLessThanK = new SubArrayProductLessThanK();
         int ans = subArrayProductLessThanK.numSubarrayProductLessThanK(new int[]{10,5,2,6}, 100);
         System.out.println("Subarray Product Less Than K : " + ans );
+
+        NumberOfSubstringsContainingAll3Characters all3Characters = new NumberOfSubstringsContainingAll3Characters();
+        int substringCount = all3Characters.numberOfSubstrings("abcabc");
+        System.out.println("Number of Substrings Containing All Three Characters : " + substringCount);
     }
 }
