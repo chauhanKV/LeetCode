@@ -106,5 +106,9 @@ public class SlidingWindowMain {
         NumberOfSubstringsContainingAll3Characters all3Characters = new NumberOfSubstringsContainingAll3Characters();
         int substringCount = all3Characters.numberOfSubstrings("abcabc");
         System.out.println("Number of Substrings Containing All Three Characters : " + substringCount);
+
+        CountNumberOfNiceSubArrays countNumberOfNiceSubArrays = new CountNumberOfNiceSubArrays();
+        int countSubArrays = countNumberOfNiceSubArrays.numberOfSubarrays(new int[] {2,2,2,1,2,2,1,2,2,2}, 2);
+        System.out.println("Count Number of Nice Subarrays : " + countSubArrays);
     }
 }
