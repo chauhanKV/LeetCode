@@ -110,5 +110,9 @@ public class SlidingWindowMain {
         CountNumberOfNiceSubArrays countNumberOfNiceSubArrays = new CountNumberOfNiceSubArrays();
         int countSubArrays = countNumberOfNiceSubArrays.numberOfSubarrays(new int[] {2,2,2,1,2,2,1,2,2,2}, 2);
         System.out.println("Count Number of Nice Subarrays : " + countSubArrays);
+
+        LongestSubarrayAfterDeleting1Element longestSubarray = new LongestSubarrayAfterDeleting1Element();
+        int longestArrayCount = longestSubarray.longestSubarray(new int[]{0,1,1,1,0,1,1,0,1});
+        System.out.println("Longest Subarray after deleting 1 element : " +longestArrayCount);
     }
 }
