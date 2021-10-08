@@ -114,5 +114,9 @@ public class SlidingWindowMain {
         LongestSubarrayAfterDeleting1Element longestSubarray = new LongestSubarrayAfterDeleting1Element();
         int longestArrayCount = longestSubarray.longestSubarray(new int[]{0,1,1,1,0,1,1,0,1});
         System.out.println("Longest Subarray after deleting 1 element : " +longestArrayCount);
+
+        ReplaceSubstringforBalancedString balancedString = new ReplaceSubstringforBalancedString();
+        int balanced = balancedString.balancedString("QQWE");
+        System.out.println("Replace the Substring for Balanced String : " + balanced);
     }
 }
