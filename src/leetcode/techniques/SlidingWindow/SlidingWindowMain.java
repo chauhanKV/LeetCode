@@ -118,5 +118,9 @@ public class SlidingWindowMain {
         ReplaceSubstringforBalancedString balancedString = new ReplaceSubstringforBalancedString();
         int balanced = balancedString.balancedString("QQWE");
         System.out.println("Replace the Substring for Balanced String : " + balanced);
+
+        FrequencyOfMostFrequentElement frequency = new FrequencyOfMostFrequentElement();
+        int out = frequency.maxFrequency(new int[]{1,2,4,8}, 5);
+        System.out.println("Frequency of most frequent element in array is : " + out);
     }
 }
