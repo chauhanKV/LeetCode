@@ -122,5 +122,9 @@ public class SlidingWindowMain {
         FrequencyOfMostFrequentElement frequency = new FrequencyOfMostFrequentElement();
         int out = frequency.maxFrequency(new int[]{1,2,4,8}, 5);
         System.out.println("Frequency of most frequent element in array is : " + out);
+
+        BinarySubArraysWithSum subArraysWithSum = new BinarySubArraysWithSum();
+        int subArraysCount = subArraysWithSum.numSubarraysWithSum(new int[]{1,0,1,0,1}, 2);
+        System.out.println("Binary Subarrays with sum : " + subArraysCount);
     }
 }
