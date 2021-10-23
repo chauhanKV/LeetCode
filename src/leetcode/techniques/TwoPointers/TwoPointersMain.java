@@ -1,6 +1,6 @@
 package leetcode.techniques.TwoPointers;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class TwoPointersMain {
     public static void main(String[] args)
@@ -12,5 +12,9 @@ public class TwoPointersMain {
         SquaresOfSortedArray squares = new SquaresOfSortedArray();
         int[] sq = squares.sortedSquares(new int[] {-4,-1,0,3,10});
         System.out.println("Squares of a Sorted Array : " + Arrays.toString(sq));
+
+        TripletSumToZero sumToZero = new TripletSumToZero();
+        List<List<Integer>> outputArray = sumToZero.threeSum(new int[] {-1,0,1,2,-1,-4});
+        System.out.println("Triplet Sum to Zero are : " + outputArray.toString());
     }
 }
