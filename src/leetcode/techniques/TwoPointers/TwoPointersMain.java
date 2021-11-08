@@ -16,5 +16,9 @@ public class TwoPointersMain {
         TripletSumToZero sumToZero = new TripletSumToZero();
         List<List<Integer>> outputArray = sumToZero.threeSum(new int[] {-1,0,1,2,-1,-4});
         System.out.println("Triplet Sum to Zero are : " + outputArray.toString());
+
+        TripletSumToClosest sumToClosest = new TripletSumToClosest();
+        int closest = sumToClosest.threeSumClosest(new int[] {0,2,1,-3}, 1);
+        System.out.println("Triplet sum closest to target is : " + closest);
     }
 }
