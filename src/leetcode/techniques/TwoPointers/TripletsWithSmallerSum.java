@@ -3,6 +3,15 @@ package leetcode.techniques.TwoPointers;
 import java.util.Arrays;
 
 public class TripletsWithSmallerSum {
+
+    // Time Complexity :
+    // Sorting => O(N * logN)
+    // Searching => O(N*2)
+    // Final => O(N * logN + N*2) => O(N*2)
+
+    // Space Complexity :
+    // Sorting => As we are not using in place sorting algorithm
+    // In this case it is => O(N)
     public int searchTriplets(int[] arr, int target) {
         int count = 0;
         if (arr.length < 3) return 0;

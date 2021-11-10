@@ -24,5 +24,9 @@ public class TwoPointersMain {
         TripletsWithSmallerSum smallerSum = new TripletsWithSmallerSum();
         int sum = smallerSum.searchTriplets(new int[] {-1, 4, 2, 1, 3}, 5);
         System.out.println("Count of Triplets with smaller sum is : " + sum);
+
+        ReturnTripletsWithSmallerSum returnTriplets = new ReturnTripletsWithSmallerSum();
+        List<List<Integer>> outputTriplets = returnTriplets.searchTriplets(new int[] {-1, 4, 2, 1, 3}, 5);
+        System.out.println("Triplets with sum smaller are : " + outputTriplets.toString());
     }
 }
