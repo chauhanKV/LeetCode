@@ -28,5 +28,9 @@ public class TwoPointersMain {
         ReturnTripletsWithSmallerSum returnTriplets = new ReturnTripletsWithSmallerSum();
         List<List<Integer>> outputTriplets = returnTriplets.searchTriplets(new int[] {-1, 4, 2, 1, 3}, 5);
         System.out.println("Triplets with sum smaller are : " + outputTriplets.toString());
+
+        ProductLessThanTarget product = new ProductLessThanTarget();
+        List<List<Integer>> list = product.findSubarrays(new int[] {10,5,2,6}, 100);
+        System.out.println("SubArrays with product less than target are : " + list.toString());
     }
 }
