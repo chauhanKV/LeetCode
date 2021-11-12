@@ -32,5 +32,9 @@ public class TwoPointersMain {
         ProductLessThanTarget product = new ProductLessThanTarget();
         List<List<Integer>> list = product.findSubarrays(new int[] {10,5,2,6}, 100);
         System.out.println("SubArrays with product less than target are : " + list.toString());
+
+        SortColors sort = new SortColors();
+        int[] nums = sort.sortColors(new int[]{2,0,2,1,1,0});
+        System.out.println("Dutch flag problem : " + Arrays.toString(nums));
     }
 }
