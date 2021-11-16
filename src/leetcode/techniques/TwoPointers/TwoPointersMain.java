@@ -36,5 +36,9 @@ public class TwoPointersMain {
         SortColors sort = new SortColors();
         int[] nums = sort.sortColors(new int[]{2,0,2,1,1,0});
         System.out.println("Dutch flag problem : " + Arrays.toString(nums));
+
+        QuadrupletsSumToTarget fourSum = new QuadrupletsSumToTarget();
+        List<List<Integer>> sumFour = fourSum.fourSum(new int[] {1,0,-1,0,-2,2}, 0);
+        System.out.println("Quadruplets Sum to target : " + sumFour.toString());
     }
 }
