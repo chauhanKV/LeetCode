@@ -21,18 +21,18 @@ public class QuadrupletsSumToTarget {
                 {
                     if(j == i+1 || (j > i+1 && nums[j] != nums[j-1]))
                     {
-                        int first = nums[i];
-                        int second = nums[j];
-                        int left = nums[j+1];
-                        int right = nums[nums.length - 1];
+                        int first = i;
+                        int second = j;
+                        int left = j+1;
+                        int right = nums.length - 1;
 
 
-                        while(left < right)
+                        while(left >= 0 && right <= nums.length - 1 && left < right)
                         {
-                            int sum = first + second + left + right;
+                            int sum = nums[first] + nums[second] + nums[left] + nums[right];
                             if(sum == target)
                             {
-                                list.add(Arrays.asList(first, second, left, right));
+                                list.add(Arrays.asList(nums[first], nums[second], nums[left], nums[right]));
                                 left++;
                                 right--;
                                 while(left < right && nums[left] == nums[left - 1])
