@@ -40,5 +40,8 @@ public class TwoPointersMain {
         QuadrupletsSumToTarget fourSum = new QuadrupletsSumToTarget();
         List<List<Integer>> sumFour = fourSum.fourSum(new int[] {1,0,-1,0,-2,2}, 0);
         System.out.println("Quadruplets Sum to target : " + sumFour.toString());
+
+        BackSpaceStringCompare compare = new BackSpaceStringCompare();
+        System.out.println("Comparing strings containing backspaces : " + compare.backspaceCompare("bbbextm", "bbb#extm"));
     }
 }
