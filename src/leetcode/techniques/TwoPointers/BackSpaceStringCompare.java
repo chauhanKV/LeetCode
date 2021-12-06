@@ -1,6 +1,13 @@
 package leetcode.techniques.TwoPointers;
 
 public class BackSpaceStringCompare {
+    //Runtime: 0 ms, faster than 100.00% of Java online submissions for Backspace String Compare.
+    //Memory Usage: 36.9 MB, less than 98.35% of Java online submissions for Backspace String Compare.
+    //Next challenges:
+    //Crawler Log Folder
+
+    // Time Complexity : O(M+N)
+    // Space Complexity : O(1)
     public boolean backspaceCompare(String s, String t) {
         int index1 = s.length() - 1;
         int index2 = t.length() - 1;
