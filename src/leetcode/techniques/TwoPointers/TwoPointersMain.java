@@ -43,5 +43,9 @@ public class TwoPointersMain {
 
         BackSpaceStringCompare compare = new BackSpaceStringCompare();
         System.out.println("Comparing strings containing backspaces : " + compare.backspaceCompare("bbbextm", "bbb#extm"));
+
+        MinimumWindowSort sortedSubArray = new MinimumWindowSort();
+        int sortedCount = sortedSubArray.findUnsortedSubarray(new int[] {2,6,4,8,10,9,15});
+        System.out.println("Shortest Unsorted Continuous Subarray : " + sortedCount);
     }
 }
