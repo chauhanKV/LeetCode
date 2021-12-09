@@ -13,6 +13,8 @@ public class FastAndSlowPointerMain {
       list.createCycleAtPosition(2);
 
       System.out.println("Does LinkedList has cycle ? : " + list.hasCycle());
+      int value = list.getStartValueOfCycle();
+      System.out.println("Get Start Value of the Cycle : " + value);
   }
 
 

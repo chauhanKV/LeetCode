@@ -134,6 +134,56 @@ public class LinkedList<T> {
         return false;
     }
 
+    //Runtime: 0 ms, faster than 100.00% of Java online submissions for Linked List Cycle II.
+    //Memory Usage: 39.1 MB, less than 73.39% of Java online submissions for Linked List Cycle II.
+    //Next challenges:
+    //Find the Duplicate Number
+
+    //Time Complexity : O(N)
+    //Space Complexity : O(1) constant space
+
+    // Floyds cycle detection algorithm
+
+    public int getStartValueOfCycle()
+    {
+        var fast = first;
+        var slow = first;
+        var headNodeValue = first;
+        boolean foundCycle = false;
+
+        while(fast != null && fast.next != null)
+        {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(slow == fast)
+            {
+                // Found the cycle
+                // Find head node
+                foundCycle = true;
+                headNodeValue = findHeadNodeValue(fast, first);
+                break;
+
+            }
+        }
+        return foundCycle ?  (int)headNodeValue.value : 0;
+    }
+
+    private Node findHeadNodeValue(Node fast, Node first)
+    {
+        var slow = first;
+
+        while(fast != slow)
+        {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        return fast;
+    }
+
+
+
     public void createCycleAtPosition(int position)
     {
         if(position > size)
