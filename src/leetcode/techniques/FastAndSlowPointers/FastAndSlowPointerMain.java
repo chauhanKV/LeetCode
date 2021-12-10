@@ -15,6 +15,10 @@ public class FastAndSlowPointerMain {
       System.out.println("Does LinkedList has cycle ? : " + list.hasCycle());
       int value = list.getStartValueOfCycle();
       System.out.println("Get Start Value of the Cycle : " + value);
+
+      HappyNumber happyNumber = new HappyNumber();
+      boolean isHappy = happyNumber.isHappy(19);
+      System.out.println("Is number HAPPY ? : " + isHappy);
   }
 
 
