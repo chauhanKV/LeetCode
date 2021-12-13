@@ -9,7 +9,7 @@ public class HappyNumber {
     //Ugly Number
     //Sum of Digits of String After Convert
 
-    // Time Complexity : O(N)
+    // Time Complexity : O(LogN) #### Need to understand this better ####
     // Space Complexity : O(1)
     public boolean isHappy(int n) {
         int slow = n, fast = n;

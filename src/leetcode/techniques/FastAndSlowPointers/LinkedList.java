@@ -205,6 +205,28 @@ public class LinkedList<T> {
         }
     }
 
+
+    //Runtime: 0 ms, faster than 100.00% of Java online submissions for Middle of the Linked List.
+    //Memory Usage: 36.7 MB, less than 33.97% of Java online submissions for Middle of the Linked List.
+    //Next challenges:
+    //Delete the Middle Node of a Linked List
+
+    // Time Complexity : O(N)
+    // Space Complexity : O(1)
+
+    // fast pointer is moving twice as that of slow pointer, so when slow pointer reaches middle, fast pointer reach end of the list.
+    public T getMiddleOfList()
+    {
+        var slow = first;
+        var fast = first;
+        while(fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.value;
+    }
+
     public void add(int index, T element)
     {}
 

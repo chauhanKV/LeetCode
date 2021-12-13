@@ -19,6 +19,23 @@ public class FastAndSlowPointerMain {
       HappyNumber happyNumber = new HappyNumber();
       boolean isHappy = happyNumber.isHappy(19);
       System.out.println("Is number HAPPY ? : " + isHappy);
+
+      LinkedList<Integer> middle = new LinkedList<>();
+      middle.addFirst(1);
+      middle.addFirst(2);
+      middle.addFirst(3);
+      middle.addFirst(4);
+      middle.addFirst(5);
+      middle.addFirst(6);
+      middle.addFirst(7);
+      middle.addFirst(8);
+      middle.addFirst(9);
+      middle.addFirst(10);
+      middle.addFirst(11);
+
+      int middleOfList = middle.getMiddleOfList();
+      System.out.println("Middle of the list is : " + middleOfList);
+
   }
 
 
