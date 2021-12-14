@@ -227,6 +227,29 @@ public class LinkedList<T> {
         return slow.value;
     }
 
+    //Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.
+    //Memory Usage: 38.4 MB, less than 94.27% of Java online submissions for Reverse Linked List.
+    //Next challenges:
+    //Reverse Linked List II
+    //Binary Tree Upside Down
+    //Palindrome Linked List
+    //Reverse Nodes in Even Length Groups
+
+    // Time Complexity : O(N)
+    // Space Complexity : O(1)
+    public void reverseList()
+    {
+        Node<T> previous = null;
+        while(first != null)
+        {
+            Node<T> next = first.next;
+            first.next = previous;
+
+            previous = first;
+            first = next;
+        }
+    }
+
     public void add(int index, T element)
     {}
 
