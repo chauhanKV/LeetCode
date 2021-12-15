@@ -1,5 +1,7 @@
 package leetcode.techniques.FastAndSlowPointers;
 
+import java.sql.SQLOutput;
+
 public class FastAndSlowPointerMain {
 
   public static void main(String[] args)
@@ -35,6 +37,15 @@ public class FastAndSlowPointerMain {
 
       int middleOfList = middle.getMiddleOfList();
       System.out.println("Middle of the list is : " + middleOfList);
+
+      LinkedList<Integer> newList = new LinkedList<>();
+      newList.addFirst(1);
+      newList.addFirst(2);
+      newList.addFirst(3);
+      newList.addFirst(2);
+      newList.addFirst(1);
+      boolean isPalindrome = newList.isListPalindrome();
+      System.out.println("Does List have Palindrome ? : " + isPalindrome);
 
   }
 

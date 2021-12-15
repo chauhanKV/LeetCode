@@ -250,6 +250,65 @@ public class LinkedList<T> {
         }
     }
 
+    private Node<T> reverseList(Node<T> middle)
+    {
+        Node<T> previous = null;
+        while(middle != null)
+        {
+            Node<T> next = middle.next;
+            middle.next = previous;
+
+            previous = middle;
+            middle = next;
+        }
+
+        return previous;
+    }
+
+    //Runtime: 5 ms, faster than 78.98% of Java online submissions for Palindrome Linked List.
+    //Memory Usage: 115.7 MB, less than 15.78% of Java online submissions for Palindrome Linked List.
+    //Next challenges:
+    //Palindrome Number
+    //Valid Palindrome
+
+    // Time Complexity : O(N)
+    // Space Complexity : O(1)
+    public boolean isListPalindrome()
+    {
+        if(isEmpty()) return false;
+
+        var slow = first;
+        var fast = first;
+
+        while(fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        var headSecondHalf = reverseList(slow);
+        var copyOfSecondHalf = headSecondHalf;
+
+        while(first != null && headSecondHalf != null)
+        {
+            if(first.value != headSecondHalf.value)
+            {
+                break;
+            }
+            first = first.next;
+            headSecondHalf = headSecondHalf.next;
+        }
+
+        if((first == null || first.next == null) && headSecondHalf == null)
+        {
+            reverseList(copyOfSecondHalf);
+            return true;
+        }
+        reverseList(copyOfSecondHalf);
+
+        return false;
+    }
+
     public void add(int index, T element)
     {}
 
