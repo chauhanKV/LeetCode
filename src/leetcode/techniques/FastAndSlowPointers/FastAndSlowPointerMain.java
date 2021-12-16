@@ -47,6 +47,17 @@ public class FastAndSlowPointerMain {
       boolean isPalindrome = newList.isListPalindrome();
       System.out.println("Does List have Palindrome ? : " + isPalindrome);
 
+      LinkedList<Integer> newList1 = new LinkedList<>();
+      newList1.addFirst(1);
+      newList1.addFirst(2);
+      newList1.addFirst(3);
+      newList1.addFirst(4);
+      newList1.addFirst(5);
+      newList1.addFirst(6);
+
+      newList1.reorderList();
+      // Work on showing the list in console.
+
   }
 
 

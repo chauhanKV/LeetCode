@@ -273,6 +273,8 @@ public class LinkedList<T> {
 
     // Time Complexity : O(N)
     // Space Complexity : O(1)
+
+    // Try recursion approach for this solution
     public boolean isListPalindrome()
     {
         if(isEmpty()) return false;
@@ -307,6 +309,45 @@ public class LinkedList<T> {
         reverseList(copyOfSecondHalf);
 
         return false;
+    }
+
+    //Runtime: 1 ms, faster than 99.87% of Java online submissions for Reorder List.
+    //Memory Usage: 42 MB, less than 44.25% of Java online submissions for Reorder List.
+    //Next challenges:
+    //Delete the Middle Node of a Linked List
+
+    // Time Complexity : O(N)
+    // Space Complexity : O(1)
+    public void reorderList() {
+        if(isEmpty()) return;
+
+        var fast = first;
+        var slow = first;
+
+        while(fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        var secondHalf = reverseList(slow);
+        var firstHalf = first;
+
+        while(secondHalf != null && firstHalf != null)
+        {
+            var temp = firstHalf.next;
+            firstHalf.next = secondHalf;
+            firstHalf = temp;
+
+            temp = secondHalf.next;
+            secondHalf.next = firstHalf;
+            secondHalf = temp;
+        }
+
+        if(firstHalf != null)
+        {
+            firstHalf.next = null;
+        }
     }
 
     public void add(int index, T element)
