@@ -58,6 +58,10 @@ public class FastAndSlowPointerMain {
       newList1.reorderList();
       // Work on showing the list in console.
 
+      CircularArrayLoop arrayLoop = new CircularArrayLoop();
+      var hasLoop = arrayLoop.circularArrayLoop(new int[] {2,-1,1,2,2});
+      System.out.println("Circular Array Loop : " + hasLoop);
+
   }
 
 
