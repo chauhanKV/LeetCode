@@ -350,6 +350,37 @@ public class LinkedList<T> {
         }
     }
 
+    //Runtime: 4 ms, faster than 99.82% of Java online submissions for Delete the Middle Node of a Linked List.
+    //Memory Usage: 64 MB, less than 72.91% of Java online submissions for Delete the Middle Node of a Linked List.
+    //Next challenges:
+    //Remove Nth Node From End of List
+    //Remove Linked List Elements
+
+    // Time Complexity : O(N)
+    // Space Complexity : O(N)
+    public void deleteMiddle() {
+
+        if(first.next == null)
+        {
+            first = null;
+            return;
+        }
+
+        var slow = first;
+        var fast = first;
+        var previous = first;
+
+        while(fast != null && fast.next != null)
+        {
+            previous = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        previous.next = slow.next;
+        slow.next = null;
+    }
+
     public void add(int index, T element)
     {}
 

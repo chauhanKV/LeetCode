@@ -62,6 +62,9 @@ public class FastAndSlowPointerMain {
       var hasLoop = arrayLoop.circularArrayLoop(new int[] {2,-1,1,2,2});
       System.out.println("Circular Array Loop : " + hasLoop);
 
+      newList1.deleteMiddle();
+      System.out.println("Middle of the Linked List has been Deleted");
+
   }
 
 
