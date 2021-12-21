@@ -59,7 +59,7 @@ public class FastAndSlowPointerMain {
       // Work on showing the list in console.
 
       CircularArrayLoop arrayLoop = new CircularArrayLoop();
-      var hasLoop = arrayLoop.circularArrayLoop(new int[] {2,-1,1,2,2});
+      var hasLoop = arrayLoop.circularArrayLoop(new int[] {3,1,2});
       System.out.println("Circular Array Loop : " + hasLoop);
 
       newList1.deleteMiddle();

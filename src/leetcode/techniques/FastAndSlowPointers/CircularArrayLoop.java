@@ -2,38 +2,56 @@ package leetcode.techniques.FastAndSlowPointers;
 
 public class CircularArrayLoop {
 
-    // Need to work on efficient solution.
-    // This solution gives error.
+    // Revisit again to understand all edges cases
     public boolean circularArrayLoop(int[] nums) {
+        if(nums.length <= 1) return false;
 
-        if(nums.length == 0) return false;
-
-        int fastPointer = 0, fastValue = nums[fastPointer];
-        int slowPointer = 1, slowValue = nums[slowPointer];
-
-
-        while(fastValue != slowValue && fastPointer < nums.length && slowPointer < nums.length)
+        for(int i = 0; i < nums.length; i++)
         {
+            int slow = 0, fast = 0;
+            boolean isForward = nums[i] >= 0;
 
-            while(fastValue != 0)
+            while(true)
             {
-                fastValue--;
-                fastPointer++;
+                slow = getNextPosition(nums, isForward, slow);
+                if(slow == -1)
+                    break;
+
+                fast = getNextPosition(nums, isForward, fast);
+                if(fast == -1)
+                    break;
+
+                fast = getNextPosition(nums, isForward, fast);
+                if(fast == -1)
+                    break;
+
+                if(slow == fast)
+                    return true;
             }
 
-            while(slowValue != 0)
-            {
-                slowValue--;
-                fastPointer++;
-            }
 
-            fastValue = nums[fastPointer];
-            slowValue = nums[slowPointer];
+        }
+        return false;
+    }
+
+    private int getNextPosition(int[] nums, boolean isForward, int pointer)
+    {
+        boolean direction = nums[pointer] >= 0;
+        // Edge case 1
+        if(direction != isForward)
+            return -1;
+
+        int nextIndex = (pointer + nums[pointer]) % nums.length;
+
+        if(nextIndex < 0)
+        {
+            nextIndex = nextIndex + nums.length;
         }
 
-        if(fastValue == slowValue)
-            return true;
-        else
-            return false;
+        // Edge case 2
+        if(nextIndex == pointer)
+            return -1;
+
+        return nextIndex;
     }
 }
