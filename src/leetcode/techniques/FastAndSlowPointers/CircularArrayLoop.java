@@ -1,14 +1,21 @@
 package leetcode.techniques.FastAndSlowPointers;
 
 public class CircularArrayLoop {
+    //Runtime: 22 ms, faster than 29.88% of Java online submissions for Circular Array Loop.
+    //Memory Usage: 36.4 MB, less than 82.65% of Java online submissions for Circular Array Loop.
+    //Next challenges:
+    //Two Sum III - Data structure design
+    //Largest Number After Mutating Substring
+    //Maximum Compatibility Score Sum
 
-    // Revisit again to understand all edges cases
+    // Time Complexity : O(N)
+    // Space Compexity : O(1)
     public boolean circularArrayLoop(int[] nums) {
         if(nums.length <= 1) return false;
 
         for(int i = 0; i < nums.length; i++)
         {
-            int slow = 0, fast = 0;
+            int slow = i, fast = i;
             boolean isForward = nums[i] >= 0;
 
             while(true)
