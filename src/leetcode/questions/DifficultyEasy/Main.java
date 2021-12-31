@@ -35,5 +35,8 @@ public class Main {
         AddDigits addDigits = new AddDigits();
         int addition = addDigits.addDigits(38);
         System.out.println("Addition of input value is : " +addition);
+
+        ContainsDuplicate containsDuplicate = new ContainsDuplicate();
+        System.out.println("Contains Duplicate ? : " + containsDuplicate.containsDuplicate(new int[]{1,2,3,1}));
     }
 }
