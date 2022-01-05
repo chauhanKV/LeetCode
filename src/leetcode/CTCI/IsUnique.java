@@ -19,4 +19,14 @@ public class IsUnique {
         return true;
     }
 
+
+
+//
+//public boolean isUnique(String value) {
+//    System.out.println("a" + );
+//return false;
+//}
+
+
+
 }
