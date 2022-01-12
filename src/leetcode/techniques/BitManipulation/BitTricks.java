@@ -11,4 +11,14 @@ public class BitTricks {
     {
         return (n & (~(n << (k - 1))));
     }
+
+    public void oddEven(int i)
+    {
+        if((i & 1) == 0)
+            System.out.println("Number is even number");
+        else
+            System.out.println("Number is odd number");
+    }
+
+
 }
