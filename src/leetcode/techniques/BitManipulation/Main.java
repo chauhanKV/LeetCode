@@ -1,5 +1,8 @@
 package leetcode.techniques.BitManipulation;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
     public static void main (String[] args)
     {
@@ -17,6 +20,10 @@ public class Main {
         ReverseBits reverseBits = new ReverseBits();
         int reversed = reverseBits.reverseBits(43261596);
         System.out.println("Reverse Bits are : " + reversed);
+
+        CountBits count = new CountBits();
+        int[] arr = count.countBits(5);
+        System.out.println("Number of bits are : " + Arrays.toString(arr));
 
     }
 }
