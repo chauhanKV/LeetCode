@@ -25,5 +25,8 @@ public class Main {
         int[] arr = count.countBits(5);
         System.out.println("Number of bits are : " + Arrays.toString(arr));
 
+        AddBinary add = new AddBinary();
+        String addition = add.addBinary("111", "11");
+        System.out.println("Addition of two binary numbers is : " + addition);
     }
 }
