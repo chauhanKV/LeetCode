@@ -17,6 +17,9 @@ public class Main {
         int clear = bitTricks.clearKthBit(125, 2);
         System.out.println("Clearing kth bit results to : " + clear);
 
+        int parity = bitTricks.parity(127);
+        System.out.println("Is odd Parity ? " + parity);
+
         ReverseBits reverseBits = new ReverseBits();
         int reversed = reverseBits.reverseBits(43261596);
         System.out.println("Reverse Bits are : " + reversed);

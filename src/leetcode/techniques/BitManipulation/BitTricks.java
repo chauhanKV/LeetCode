@@ -20,5 +20,15 @@ public class BitTricks {
             System.out.println("Number is odd number");
     }
 
+    public int parity(int i)
+    {
+        int result = 0;
+        while(i > 0)
+        {
+            result = result ^ 1;
+            i = i & (i - 1); // Optimized approach to remove lowest bit from the result set.
+        }
+        return result;
+    }
 
 }
