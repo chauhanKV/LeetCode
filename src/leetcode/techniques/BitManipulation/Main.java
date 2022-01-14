@@ -31,5 +31,9 @@ public class Main {
         AddBinary add = new AddBinary();
         String addition = add.addBinary("111", "11");
         System.out.println("Addition of two binary numbers is : " + addition);
+
+        SingleNumber pair = new SingleNumber();
+        int num = pair.singleNumber(new int[]{2,2,1});
+        System.out.println("Return the number not in pair : " + num);
     }
 }
