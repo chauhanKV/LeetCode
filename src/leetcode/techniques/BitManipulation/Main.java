@@ -35,5 +35,9 @@ public class Main {
         SingleNumber pair = new SingleNumber();
         int num = pair.singleNumber(new int[]{2,2,1});
         System.out.println("Return the number not in pair : " + num);
+
+        SingleNumberII twoPair = new SingleNumberII();
+        int num2 = twoPair.singleNumber(new int[] {2,2,2,1});
+        System.out.println("3 number with 1 missing : " + num2);
     }
 }
