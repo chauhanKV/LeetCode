@@ -2,24 +2,38 @@ package leetcode.techniques.NumberTheory;
 
 public class CountPrimeNumbers {
 
+    // Sieve of Eratosthenes
+    // Understand more clearly.
     public int countPrimes(int n) {
-        boolean flag = true;
-        int primeCount = 1;
-        for(int i = 1 ; i < n; i++)
+        if(n == 0) return 0;
+        boolean isPrime[] = new boolean[n+1];
+        int countPrime = 0;
+
+        for(int i = 0 ; i < isPrime.length; i++)
         {
-            for(int j = 2 ; j <= i; j++)
+            isPrime[i] = true;
+        }
+        isPrime[0] = false;
+        isPrime[1] = false;
+
+        for(int i = 2; i * i <= n ; i++)
+        {
+            if(isPrime[i] == true)
             {
-                if(i % j == 0)
+                for(int j = i * i; j <= n; j = j+i)
                 {
-                    flag = false;
-                    break;
+                    isPrime[j] = false;
                 }
             }
-            if(flag)
+        }
+
+        for(int i = 0 ; i < isPrime.length; i++)
+        {
+            if(isPrime[i] == true)
             {
-                primeCount++;
+                countPrime++;
             }
         }
-        return primeCount;
+        return countPrime;
     }
 }
