@@ -20,5 +20,8 @@ public class Main {
 
         int fibRecursive = fib.fibRecursive(10);
         System.out.println("Fibonacci Number with Recursive Approach : " + fibRecursive);
+
+        PrintFibonacciTillN tillN = new PrintFibonacciTillN();
+        tillN.Printfib(10);
     }
 }
