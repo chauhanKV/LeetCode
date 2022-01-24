@@ -10,5 +10,15 @@ public class Main {
         UglyNumber no = new UglyNumber();
         boolean isNumberUgly = no.isUgly(8);
         System.out.println("Is number ugly ? : " + isNumberUgly);
+
+        PrimeTillN prime = new PrimeTillN();
+        prime.printPrimeTillN(23, 57);
+
+        FibonacciNumber fib = new FibonacciNumber();
+        int fibNo = fib.fib(10);
+        System.out.println("Fibonacci Number is : " + fibNo);
+
+        int fibRecursive = fib.fibRecursive(10);
+        System.out.println("Fibonacci Number with Recursive Approach : " + fibRecursive);
     }
 }
