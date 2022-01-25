@@ -23,5 +23,9 @@ public class Main {
 
         PrintFibonacciTillN tillN = new PrintFibonacciTillN();
         tillN.Printfib(10);
+
+        ClimbingStairs cs = new ClimbingStairs();
+        int countWays = cs.climbStairs(10);
+        System.out.println("Number of ways to climb the stairs are : " + countWays);
     }
 }
