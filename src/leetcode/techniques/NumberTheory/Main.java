@@ -31,5 +31,9 @@ public class Main {
         Tribonnaci tri = new Tribonnaci();
         int value = tri.tribonacciValue(10);
         System.out.println("Tribonnaci value of input number is : " + value);
+
+        InverseANumber inverse = new InverseANumber();
+        int inverted = inverse.InverseNumber(231645);
+        System.out.println("Inverted number is : " + inverted);
     }
 }
