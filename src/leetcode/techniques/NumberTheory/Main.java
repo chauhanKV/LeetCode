@@ -27,5 +27,9 @@ public class Main {
         ClimbingStairs cs = new ClimbingStairs();
         int countWays = cs.climbStairs(10);
         System.out.println("Number of ways to climb the stairs are : " + countWays);
+
+        Tribonnaci tri = new Tribonnaci();
+        int value = tri.tribonacciValue(10);
+        System.out.println("Tribonnaci value of input number is : " + value);
     }
 }
