@@ -1,5 +1,8 @@
 package leetcode.techniques.NumberTheory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String args[])
     {
@@ -35,5 +38,9 @@ public class Main {
         InverseANumber inverse = new InverseANumber();
         int inverted = inverse.InverseNumber(231645);
         System.out.println("Inverted number is : " + inverted);
+
+        FizzBuzz fizz = new FizzBuzz();
+        List<String> fizValue = fizz.fizzBuzz(10);
+        System.out.println("FizzBuzz value is : " + fizValue);
     }
 }
