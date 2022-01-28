@@ -42,5 +42,9 @@ public class Main {
         FizzBuzz fizz = new FizzBuzz();
         List<String> fizValue = fizz.fizzBuzz(10);
         System.out.println("FizzBuzz value is : " + fizValue);
+
+        Palindrome palindrome = new Palindrome();
+        boolean isPalindrome = palindrome.isPalindrome(12321);
+        System.out.println("Is Number Palindrome ? : " + isPalindrome);
     }
 }
