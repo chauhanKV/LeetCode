@@ -1,5 +1,6 @@
 package leetcode.techniques.TwoPointers;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class TwoPointersMain {
@@ -47,5 +48,9 @@ public class TwoPointersMain {
         MinimumWindowSort sortedSubArray = new MinimumWindowSort();
         int sortedCount = sortedSubArray.findUnsortedSubarray(new int[] {2,6,4,8,10,9,15});
         System.out.println("Shortest Unsorted Continuous Subarray : " + sortedCount);
+
+        ReverseString reverse = new ReverseString();
+        reverse.reverseString(new char[]{'H','a','n','n','a','h'});
+
     }
 }
