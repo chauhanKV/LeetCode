@@ -46,5 +46,9 @@ public class Main {
         Palindrome palindrome = new Palindrome();
         boolean isPalindrome = palindrome.isPalindrome(12321);
         System.out.println("Is Number Palindrome ? : " + isPalindrome);
+
+        RotateANumber rotate = new RotateANumber();
+        int rotation = rotate.rotateNumber(325233, -546345345);
+        System.out.println("Rotated number is : " + rotation);
     }
 }
