@@ -50,5 +50,10 @@ public class Main {
         RotateANumber rotate = new RotateANumber();
         int rotation = rotate.rotateNumber(325233, -546345345);
         System.out.println("Rotated number is : " + rotation);
+
+        GCDandLCM gcdlcm = new GCDandLCM();
+        gcdlcm.getGCD(12, 8);
+
+        gcdlcm.getGCDByEuclideansAlgo(12, 8);
     }
 }
