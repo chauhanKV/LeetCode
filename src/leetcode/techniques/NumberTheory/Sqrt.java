@@ -1,7 +1,7 @@
 package leetcode.techniques.NumberTheory;
 
 public class Sqrt {
-    public int mySqrt(int x) {
+    public int findSqrt(int x) {
 
         int i = 1;
         while(i * i <= x)

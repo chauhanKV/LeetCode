@@ -57,7 +57,7 @@ public class Main {
         gcdlcm.getGCDByEuclideansAlgo(12, 8);
 
         Sqrt root = new Sqrt();
-        int rt = root.mySqrt(240);
+        int rt = root.findSqrt(240);
         System.out.println("Square Root of number is : " + rt);
 
         PrimeFactorization primeFactor = new PrimeFactorization();
