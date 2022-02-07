@@ -61,6 +61,6 @@ public class Main {
         System.out.println("Square Root of number is : " + rt);
 
         PrimeFactorization primeFactor = new PrimeFactorization();
-        primeFactor.findPrimeFactors(1440);
+        primeFactor.findPrimeFactors(30);
     }
 }

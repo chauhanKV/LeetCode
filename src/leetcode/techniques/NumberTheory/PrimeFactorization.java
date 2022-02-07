@@ -3,26 +3,21 @@ package leetcode.techniques.NumberTheory;
 public class PrimeFactorization {
     public void findPrimeFactors(int n)
     {
-        int quotient = 0, remainder = -1, i = 2;
-
-        while(quotient != 1)
-        {
-            if(remainder > 0)
+        // if p * q < n
+        // then p < n and q < n
+        // also p < sqrt(n), and this is the reason we run loop till sqrt
+        for(int div = 2; div * div <= n; div++) {
+            while(n % div == 0)
             {
-                i++;
-                remainder = n % i;
+                System.out.print(div);
+                System.out.print(" ");
+                n = n / div;
             }
-            else
-            {
-                quotient = n / i;
-                remainder = n % i;
 
-                if(remainder == 0)
-                {
-                    n = quotient;
-                    System.out.print(i);
-                    System.out.print(' ');
-                }
+            if(n != 1)
+            {
+                System.out.print(n);
+                System.out.print(" ");
             }
         }
     }
