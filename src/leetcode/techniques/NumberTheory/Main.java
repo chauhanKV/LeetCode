@@ -62,5 +62,10 @@ public class Main {
 
         PrimeFactorization primeFactor = new PrimeFactorization();
         primeFactor.findPrimeFactors(30);
+        System.out.println(" ");
+
+        PythagoreanTriplet triple = new PythagoreanTriplet();
+        boolean isTriplet = triple.isPythagoreanTriplet(3, 4, 5);
+        System.out.println("Are the given numbers Pythagorean Triplet ? " + isTriplet);
     }
 }
