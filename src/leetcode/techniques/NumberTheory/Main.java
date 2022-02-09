@@ -67,5 +67,19 @@ public class Main {
         PythagoreanTriplet triple = new PythagoreanTriplet();
         boolean isTriplet = triple.isPythagoreanTriplet(3, 4, 5);
         System.out.println("Are the given numbers Pythagorean Triplet ? " + isTriplet);
+
+        MissingNumbers missing = new MissingNumbers();
+        int number = missing.missingNumber(new int[]{0,1});
+        System.out.println("Missing Number is : " + number);
+
+        BenjaminBulbs bulbs = new BenjaminBulbs();
+        System.out.print("Bulbs that are on after N fluctuations are : ");
+        bulbs.findOnBenjaminBulbsOptimized(20);
+        System.out.println(" ");
+
+        BulbSwitcher switcher = new BulbSwitcher();
+        int switchedBulbs = switcher.bulbSwitch(20);
+        System.out.println("Bulbs switched on after N fluctuations are : " + switchedBulbs);
+
     }
 }
