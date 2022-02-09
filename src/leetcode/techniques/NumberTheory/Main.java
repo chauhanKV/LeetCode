@@ -81,5 +81,8 @@ public class Main {
         int switchedBulbs = switcher.bulbSwitch(20);
         System.out.println("Bulbs switched on after N fluctuations are : " + switchedBulbs);
 
+        MaxMin2 maxMin = new MaxMin2();
+        maxMin.getMaxMin(new int[] {3, 7, 2, -1, 4, 9});
+
     }
 }
