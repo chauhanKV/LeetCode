@@ -84,5 +84,12 @@ public class Main {
         MaxMin2 maxMin = new MaxMin2();
         maxMin.getMaxMin(new int[] {3, 7, 2, -1, 4, 9});
 
+        PowerOfThree three = new PowerOfThree();
+        boolean powThree = three.isPowerOfThree(27);
+        System.out.println("Is number power of 3 ? : " + powThree);
+
+        PowerOfFour four = new PowerOfFour();
+        boolean powFour = four.isPowerOfFour(27);
+        System.out.println("Is number power of 4 ? : " + powFour);
     }
 }
