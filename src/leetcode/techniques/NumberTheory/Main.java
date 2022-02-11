@@ -91,5 +91,13 @@ public class Main {
         PowerOfFour four = new PowerOfFour();
         boolean powFour = four.isPowerOfFour(27);
         System.out.println("Is number power of 4 ? : " + powFour);
+
+        ConvertToAnyBase convertAnyBase = new ConvertToAnyBase();
+        int conversionToAny = convertAnyBase.getValueInBase(57, 2);
+        System.out.println("Number converted to any base is : " + conversionToAny);
+
+        ConvertToBase7 convertBase7 = new ConvertToBase7();
+        String base7 = convertBase7.convertToBase7(57);
+        System.out.println("Number converted to base 7 is : " + base7);
     }
 }
