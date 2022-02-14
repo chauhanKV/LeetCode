@@ -38,5 +38,9 @@ public class Main {
 
         ContainsDuplicate containsDuplicate = new ContainsDuplicate();
         System.out.println("Contains Duplicate ? : " + containsDuplicate.containsDuplicate(new int[]{1,2,3,1}));
+
+        ValidParentheses vlid = new ValidParentheses();
+        boolean isValid = vlid.isValid("{()}}]");
+        System.out.println("Are parentheses valid ? : " + isValid);
     }
 }
