@@ -56,10 +56,6 @@ public class Main {
 
         gcdlcm.getGCDByEuclideansAlgo(12, 8);
 
-        Sqrt root = new Sqrt();
-        int rt = root.findSqrt(240);
-        System.out.println("Square Root of number is : " + rt);
-
         PrimeFactorization primeFactor = new PrimeFactorization();
         primeFactor.findPrimeFactors(30);
         System.out.println(" ");
@@ -99,5 +95,10 @@ public class Main {
         ConvertToBase7 convertBase7 = new ConvertToBase7();
         String base7 = convertBase7.convertToBase7(57);
         System.out.println("Number converted to base 7 is : " + base7);
+
+        Sqrt root = new Sqrt();
+        int rt = root.findSqrt(16384);
+        System.out.println("Square Root of number is : " + rt);
+
     }
 }
