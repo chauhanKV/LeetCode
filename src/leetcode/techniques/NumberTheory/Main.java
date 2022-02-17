@@ -97,8 +97,12 @@ public class Main {
         System.out.println("Number converted to base 7 is : " + base7);
 
         Sqrt root = new Sqrt();
-        int rt = root.findSqrt(16384);
-        System.out.println("Square Root of number is : " + rt);
+        int rtBS = root.mySqrtUsingBinarySearch(40);
+        System.out.println("Square Root of number is using Binary Search is : " + rtBS);
+
+        double rtNRM = root.mySqrtUsingNewtonRaphsonMethod(40);
+        System.out.print("Square Root of number is using Newton Raphson Method is : ");
+        System.out.printf("%.3f" , rtNRM);
 
     }
 }
