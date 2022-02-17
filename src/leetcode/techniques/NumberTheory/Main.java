@@ -92,6 +92,10 @@ public class Main {
         int conversionToAny = convertAnyBase.getValueInBase(57, 2);
         System.out.println("Number converted to any base is : " + conversionToAny);
 
+        AnyBaseToDecimal anybase = new AnyBaseToDecimal();
+        int toDecimal = anybase.getValueIndecimal(111001, 2);
+        System.out.println("Any base to decimal conversion is : " + toDecimal);
+
         ConvertToBase7 convertBase7 = new ConvertToBase7();
         String base7 = convertBase7.convertToBase7(57);
         System.out.println("Number converted to base 7 is : " + base7);
