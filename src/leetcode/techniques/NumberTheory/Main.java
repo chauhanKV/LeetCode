@@ -107,6 +107,15 @@ public class Main {
         double rtNRM = root.mySqrtUsingNewtonRaphsonMethod(40);
         System.out.print("Square Root of number is using Newton Raphson Method is : ");
         System.out.printf("%.3f" , rtNRM);
+        System.out.println();
+
+        AnyBaseToAnyBase any = new AnyBaseToAnyBase();
+        int anyBaseConversion = any.ConvertAnyBasetoAnyBase(8, 2, 634);
+        System.out.println("Any base to Any base conversion gives : " + anyBaseConversion);
+
+        SumBase base = new SumBase();
+        int addition = base.sumBaseValue(34, 6);
+        System.out.println("Addition of digits in base k is : " + addition);
 
     }
 }
