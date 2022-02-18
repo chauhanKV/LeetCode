@@ -117,5 +117,9 @@ public class Main {
         int addition = base.sumBaseValue(34, 6);
         System.out.println("Addition of digits in base k is : " + addition);
 
+        AnyBaseAddition anyBaseAddition = new AnyBaseAddition();
+        int baseAddition = anyBaseAddition.getSum(8, 777, 1);
+        System.out.println("Any base Addition gives : " + baseAddition);
+
     }
 }
