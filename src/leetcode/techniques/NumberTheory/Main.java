@@ -121,5 +121,13 @@ public class Main {
         int baseAddition = anyBaseAddition.getSum(8, 777, 1);
         System.out.println("Any base Addition gives : " + baseAddition);
 
+        AnyBaseSubstraction anyBaseSubstraction = new AnyBaseSubstraction();
+        int baseSubstraction = anyBaseSubstraction.getSubstraction(8, 777, 1);
+        System.out.println("Any base Substraction gives : " + baseSubstraction);
+
+        AnyBaseMultiplication anyBaseMultiplication = new AnyBaseMultiplication();
+        int baseMultiplication = anyBaseMultiplication.getMultiplication(8, 777, 1);
+        System.out.println("Any base Multiplication gives : " + baseMultiplication);
+
     }
 }
