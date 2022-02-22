@@ -42,5 +42,9 @@ public class Main {
         ValidParentheses vlid = new ValidParentheses();
         boolean isValid = vlid.isValid("{()}}]");
         System.out.println("Are parentheses valid ? : " + isValid);
+
+        RunningSum sum = new RunningSum();
+        int[] arr = sum.runningSumOf1dArray(new int[] {1,3,6,4,7});
+        System.out.println("Running sum of array is : " + Arrays.toString(arr));
     }
 }
