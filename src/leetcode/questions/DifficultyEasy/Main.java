@@ -46,5 +46,9 @@ public class Main {
         RunningSum sum = new RunningSum();
         int[] arr = sum.runningSumOf1dArray(new int[] {1,3,6,4,7});
         System.out.println("Running sum of array is : " + Arrays.toString(arr));
+
+        SumOf2Arrays sumOfArrays = new SumOf2Arrays();
+        int[] sumValue = sumOfArrays.sumOfArrays(new int[] {3,1,0,7,5}, new int[] {1,1,1,1,1,1});
+        System.out.println("Sum of two arrays is : " + Arrays.toString(sumValue));
     }
 }
