@@ -50,5 +50,9 @@ public class Main {
         SumOf2Arrays sumOfArrays = new SumOf2Arrays();
         int[] sumValue = sumOfArrays.sumOfArrays(new int[] {3,1,0,7,5}, new int[] {1,1,1,1,1,1});
         System.out.println("Sum of two arrays is : " + Arrays.toString(sumValue));
+
+        DifferenceOf2Arrays difference = new DifferenceOf2Arrays();
+        int[] diffValue = difference.differenceOfArrays(new int[] {2,6,7}, new int[] {1,0,0,0});
+        System.out.println("Difference of 2 arrays : " + Arrays.toString(diffValue));
     }
 }

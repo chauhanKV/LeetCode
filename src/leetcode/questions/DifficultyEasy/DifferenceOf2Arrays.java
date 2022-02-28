@@ -2,40 +2,37 @@ package leetcode.questions.DifficultyEasy;
 
 public class DifferenceOf2Arrays {
     public int[] differenceOfArrays(int[] arr1, int[] arr2) {
-        int[] sum = new int[arr1.length > arr2.length ? arr1.length : arr2.length];
+        int[] difference = new int[arr2.length];
 
         int i = arr1.length - 1;
         int j = arr2.length - 1;
-        int k = sum.length - 1;
+        int k = difference.length - 1;
         int burrow = 0;
 
         while(k >= 0)
         {
-            int digit = burrow;
+            int diff = 0;
+            int arr1Value = (i >= 0) ? arr1[i] : 0;
 
-            if(i >= 0)
+            if(arr2[j] + burrow >= arr1Value)
             {
-                digit -= arr1[i];
+                diff = arr2[j] + burrow - arr1Value;
+                burrow = 0;
+            }
+            else
+            {
+                diff = arr2[j] + burrow + 10 - arr1Value;
+                burrow = -1;
             }
 
-            if(j >= 0)
-            {
-                digit -= arr2[j];
-            }
+            difference[k] = diff;
 
-            burrow = digit / 10;
-            sum[k] = digit % 10;
 
             i--;
             j--;
             k--;
         }
 
-        if(burrow != 0)
-        {
-            sum[k] =  burrow;
-        }
-
-        return sum;
+        return difference;
     }
 }
