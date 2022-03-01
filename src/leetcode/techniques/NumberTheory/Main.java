@@ -1,6 +1,7 @@
 package leetcode.techniques.NumberTheory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -64,9 +65,9 @@ public class Main {
         boolean isTriplet = triple.isPythagoreanTriplet(3, 4, 5);
         System.out.println("Are the given numbers Pythagorean Triplet ? " + isTriplet);
 
-        MissingNumbers missing = new MissingNumbers();
-        int number = missing.missingNumber(new int[]{0,1});
-        System.out.println("Missing Number is : " + number);
+//        MissingNumbers missing = new MissingNumbers();
+//        int number = missing.missingNumber(new int[]{3,0,1});
+//        System.out.println("Missing Number is : " + number);
 
         BenjaminBulbs bulbs = new BenjaminBulbs();
         System.out.print("Bulbs that are on after N fluctuations are : ");
@@ -129,5 +130,8 @@ public class Main {
         int baseMultiplication = anyBaseMultiplication.getMultiplication(8, 777, 1);
         System.out.println("Any base Multiplication gives : " + baseMultiplication);
 
+        SubSetOfArray subSet = new SubSetOfArray();
+        List<List<Integer>> subSets = subSet.subsets(new int[]{10, 20, 30});
+        System.out.println("Subset of an Array are / Power Set : " + Arrays.toString(subSets.toArray()));
     }
 }
