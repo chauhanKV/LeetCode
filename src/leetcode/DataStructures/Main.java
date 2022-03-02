@@ -1,6 +1,7 @@
 package leetcode.DataStructures;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,13 @@ public class Main {
 
         SubSetOfArray subSet = new SubSetOfArray();
         subSet.printSubsetOfArray(new int[] {10, 20, 30});
+
+        ShuffleTheArray shuffle = new ShuffleTheArray();
+        int[] arr = shuffle.shuffle(new int[] {2,5,1,3,4,7}, 3);
+        System.out.println("Shuffled array : " + Arrays.toString(arr));
+
+        GreatestCandies candies = new GreatestCandies();
+        List<Boolean> result = candies.kidsWithCandies(new int[] {2,3,5,1,3}, 3);
+        System.out.println("Kids with greatest number of candies are : " + Arrays.toString(result.toArray()));
     }
 }
