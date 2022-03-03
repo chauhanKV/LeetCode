@@ -26,5 +26,8 @@ public class Main {
         GreatestCandies candies = new GreatestCandies();
         List<Boolean> result = candies.kidsWithCandies(new int[] {2,3,5,1,3}, 3);
         System.out.println("Kids with greatest number of candies are : " + Arrays.toString(result.toArray()));
+
+        BrokenEconomy broken = new BrokenEconomy();
+        broken.findFloorCeil(new int[] {10,20,30,40,50,60,70,80,90,100}, 61);
     }
 }
