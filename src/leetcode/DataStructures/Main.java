@@ -29,5 +29,9 @@ public class Main {
 
         BrokenEconomy broken = new BrokenEconomy();
         broken.findFloorCeil(new int[] {10,20,30,40,50,60,70,80,90,100}, 61);
+
+        CheckPangram pangram = new CheckPangram();
+        boolean pan = pangram.checkIfPangram("thequickbrownfoxjumpsoverthelazydog");
+        System.out.println("Check if the string is Pangram : " + pan);
     }
 }
