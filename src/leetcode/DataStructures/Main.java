@@ -33,5 +33,9 @@ public class Main {
         CheckPangram pangram = new CheckPangram();
         boolean pan = pangram.checkIfPangram("thequickbrownfoxjumpsoverthelazydog");
         System.out.println("Check if the string is Pangram : " + pan);
+
+        ConcatenationOfArray concat = new ConcatenationOfArray();
+        int[] arr1 = concat.getConcatenation(new int[] {1,2,1});
+        System.out.println("Concatenated array : " + Arrays.toString(arr1));
     }
 }
