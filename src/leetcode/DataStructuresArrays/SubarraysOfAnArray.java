@@ -1,4 +1,4 @@
-package leetcode.DataStructures;
+package leetcode.DataStructuresArrays;
 
 public class SubarraysOfAnArray {
 

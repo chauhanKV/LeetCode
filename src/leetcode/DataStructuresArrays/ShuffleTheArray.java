@@ -1,4 +1,4 @@
-package leetcode.DataStructures;
+package leetcode.DataStructuresArrays;
 
 public class ShuffleTheArray {
     public int[] shuffle(int[] nums, int n) {

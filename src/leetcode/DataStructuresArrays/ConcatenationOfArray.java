@@ -1,4 +1,4 @@
-package leetcode.DataStructures;
+package leetcode.DataStructuresArrays;
 
 public class ConcatenationOfArray {
     // Runtime: 1 ms, faster than 86.08% of Java online submissions for Concatenation of Array.

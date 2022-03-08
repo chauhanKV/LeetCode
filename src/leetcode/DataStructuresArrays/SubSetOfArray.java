@@ -1,4 +1,4 @@
-package leetcode.DataStructures;
+package leetcode.DataStructuresArrays;
 
 public class SubSetOfArray {
     public void printSubsetOfArray(int[] arr)
