@@ -1,5 +1,6 @@
 package leetcode.DataStructuresArrays;
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -42,10 +43,14 @@ public class Main {
         int[] arr2 = array.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8);
         System.out.println("First and last Position of target value in a sorted array is : " + arr2[0] + " " + arr2[1]);
 
-        MultiplicationOf2DArray multiply = new MultiplicationOf2DArray();
-        multiply.multiplyMatrix(new int[][]{{10, 0, 0}, {0, 20, 0}}, 2, 3, new int[][]{{1, 0, 1}, {0, 0, 1}, {1, 2, 1}, {1, 0, 0}}, 3, 4);
+//        MultiplicationOf2DArray multiply = new MultiplicationOf2DArray();
+//        multiply.multiplyMatrix(new int[][]{{10, 0, 0}, {0, 20, 0}}, 2, 3, new int[][]{{1, 0, 1}, {0, 0, 1}, {1, 2, 1}, {1, 0, 0}}, 3, 4);
+//
+//        WaveTraversalOf2DArray wave = new WaveTraversalOf2DArray();
+//        wave.waveTraversal(new int[][]{{11, 12, 13, 14}, {21, 22, 23, 24}, {31, 32, 33, 34}}, 3, 4);
 
-        WaveTraversalOf2DArray wave = new WaveTraversalOf2DArray();
-        wave.waveTraversal(new int[][]{{11, 12, 13, 14}, {21, 22, 23, 24}, {31, 32, 33, 34}}, 3, 4);
+        SpiralMatix2D spiral = new SpiralMatix2D();
+        spiral.printSpiralMatixClockWise(new int[][]{{1,2,3},{4, 5, 6}, {7, 8, 9}});
+        spiral.printSpiralMatixAntiClockWise(new int[][]{{1,2,3},{4, 5, 6}, {7, 8, 9}});
     }
 }
