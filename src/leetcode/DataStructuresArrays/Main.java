@@ -52,5 +52,12 @@ public class Main {
         SpiralMatix2D spiral = new SpiralMatix2D();
         spiral.printSpiralMatixClockWise(new int[][]{{1,2,3},{4, 5, 6}, {7, 8, 9}});
         spiral.printSpiralMatixAntiClockWise(new int[][]{{1,2,3},{4, 5, 6}, {7, 8, 9}});
+
+        ExitOf2DMatrix exit = new ExitOf2DMatrix();
+        exit.printExitOf2DMatrix(new int[][]{{0,0,1,0},{1,0,0,0},{0,0,0,0},{1,0,1,0}});
+
+        TransposeMatrix transpose = new TransposeMatrix();
+        int[][] resultTranspose = transpose.transpose(new int[][]{{1,2,3},{4,5,6}, {7,8,9}});
+        System.out.println("Matrix after transpose : " + Arrays.toString(resultTranspose));
     }
 }
