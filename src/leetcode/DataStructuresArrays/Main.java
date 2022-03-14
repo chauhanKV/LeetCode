@@ -61,6 +61,17 @@ public class Main {
         System.out.println("Matrix after transpose : " + Arrays.deepToString(resultTranspose));
 
         RotateImage img = new RotateImage();
-        img.rotate(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
+        img.rotate(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
+
+        RingRotate2DArray ring = new RingRotate2DArray();
+        int[][] ringArray = new int[][]{{11, 12, 13, 14, 15, 16, 17}, {21, 22, 23, 24, 25, 26, 27}, {31, 32, 33, 34, 35, 36, 37}, {41, 42, 43, 44, 45, 46, 47}, {51, 52, 53, 54, 55, 56, 57}};
+        System.out.println("Before Ring Rotation : ");
+        ring.display(ringArray);
+        System.out.println("After Ring Rotation by 3 for 2nd ring : ");
+        ring.ringRotateArray(ringArray, 2, 3);
+
+        DiagonalTraversal2DEasy diagonal = new DiagonalTraversal2DEasy();
+        System.out.println("Array after diagonal traversal : ");
+        diagonal.traverseDiagonally(new int[][] {{1,2,3,4},{5,6,7,8},{10,11,12,13},{14,15,16,17}});
     }
 }
