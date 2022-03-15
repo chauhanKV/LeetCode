@@ -78,5 +78,9 @@ public class Main {
         SaddlePoint saddle = new SaddlePoint();
         List<Integer> saddleAns = saddle.findSaddlePoint(new int[][] {{1,10,4,2},{9,3,8,7},{15,16,17,12}});
         System.out.println("Saddle Point / Lucky number in a matrix is : " + saddleAns);
+
+        SearchIn2DMatrix search = new SearchIn2DMatrix();
+        boolean found = search.searchMatrixWithReducedTC(new int[][] {{1,2,3,4},{5,6,7,8},{10,11,12,13},{14,15,16,17}}, 11);
+        System.out.println("Is element available in 2D matrix - (Searched using spiral display method) : " + found);
     }
 }
