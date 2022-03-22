@@ -1,6 +1,7 @@
 package leetcode.DataStructuresArrays;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -86,5 +87,15 @@ public class Main {
         DetermineMatrixRotation rotation = new DetermineMatrixRotation();
         boolean similar = rotation.findRotation(new int[][]{{0, 0, 0}, {0, 1, 0}, {1, 1, 1}}, new int[][]{{1, 1, 1}, {0, 1, 0}, {0, 0, 0}});
         System.out.println("Is 2D matrix similar to given matrix after rotation ? :" + similar);
+
+        RemovePrimeFromArrayList remove = new RemovePrimeFromArrayList();
+        ArrayList<Integer> arrList = new ArrayList<>();
+        arrList.add(3);
+        arrList.add(12);
+        arrList.add(13);
+        arrList.add(15);
+        ArrayList<Integer> primeRemoved = remove.removePrime(arrList);
+        System.out.println("Array list after prime number removal : " + Arrays.toString(primeRemoved.toArray()));
+
     }
 }
