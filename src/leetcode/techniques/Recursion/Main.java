@@ -10,5 +10,8 @@ public class Main {
 
         PowerLogarithmic powLog = new PowerLogarithmic();
         System.out.println("Power with logarithmic recursion approach : " + powLog.powerAnotherLogic(3, 6));
+
+        PositiveNegativePower negPosPow = new PositiveNegativePower();
+        System.out.println(negPosPow.myPow(8, -3));
     }
 }
