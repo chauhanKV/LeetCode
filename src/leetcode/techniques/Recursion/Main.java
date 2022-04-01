@@ -13,5 +13,8 @@ public class Main {
 
         PositiveNegativePower negPosPow = new PositiveNegativePower();
         System.out.println(negPosPow.myPow(8, -3));
+
+        ZigZag zig = new ZigZag();
+        zig.printZigZag(3);
     }
 }
