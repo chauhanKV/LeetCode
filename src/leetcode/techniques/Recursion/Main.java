@@ -16,5 +16,8 @@ public class Main {
 
         ZigZag zig = new ZigZag();
         zig.printZigZag(3);
+
+        NumberOfStepsToReduce reduce = new NumberOfStepsToReduce();
+        System.out.println("Number of steps to reduce to 0 : " +  reduce.numberOfSteps(14));
     }
 }
