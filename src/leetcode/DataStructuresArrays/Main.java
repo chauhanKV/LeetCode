@@ -97,5 +97,7 @@ public class Main {
         ArrayList<Integer> primeRemoved = remove.removePrime(arrList);
         System.out.println("Array list after prime number removal : " + Arrays.toString(primeRemoved.toArray()));
 
+        FindEvenNumberOfDigits digits = new FindEvenNumberOfDigits();
+        System.out.println("Count of digits with even numbers : " + digits.findNumbers(new int[] {12,345,2,6,7896}));
     }
 }
