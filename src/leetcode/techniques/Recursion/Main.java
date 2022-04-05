@@ -19,5 +19,8 @@ public class Main {
 
         NumberOfStepsToReduce reduce = new NumberOfStepsToReduce();
         System.out.println("Number of steps to reduce to 0 : " +  reduce.numberOfSteps(14));
+
+        PowerOfTwo two = new PowerOfTwo();
+        System.out.println("is number power of 2 ? : " + two.isPowerOfTwo(16));
     }
 }
