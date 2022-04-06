@@ -99,5 +99,8 @@ public class Main {
 
         FindEvenNumberOfDigits digits = new FindEvenNumberOfDigits();
         System.out.println("Count of digits with even numbers : " + digits.findNumbers(new int[] {12,345,2,6,7896}));
+
+        FlippingImage flipImg = new FlippingImage();
+        System.out.println("Image after flipping looks like : " + Arrays.deepToString(flipImg.flipAndInvertImage(new int[][] {{1,1,0,0}, {1,0,0,1}, {0,1,1,1}, {1,0,1,0}})));
     }
 }
