@@ -22,5 +22,8 @@ public class Main {
 
         PowerOfTwo two = new PowerOfTwo();
         System.out.println("is number power of 2 ? : " + two.isPowerOfTwo(16));
+
+        TowerOfHanoi tower = new TowerOfHanoi();
+        tower.printTowerOfHanoiSolution(3, 11, 12, 13);
     }
 }
