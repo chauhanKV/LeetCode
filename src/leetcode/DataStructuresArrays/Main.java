@@ -102,5 +102,9 @@ public class Main {
 
         FlippingImage flipImg = new FlippingImage();
         System.out.println("Image after flipping looks like : " + Arrays.deepToString(flipImg.flipAndInvertImage(new int[][] {{1,1,0,0}, {1,0,0,1}, {0,1,1,1}, {1,0,1,0}})));
+
+        MatrixDiagonalSum diagonalSum = new MatrixDiagonalSum();
+        int sum = diagonalSum.diagonalSum(new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {10, 11, 12, 13}, {14, 15, 16, 17}});
+        System.out.println("Matrix Diagonal sum is : " + sum);
     }
 }
