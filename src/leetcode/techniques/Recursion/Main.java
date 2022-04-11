@@ -25,5 +25,9 @@ public class Main {
 
         TowerOfHanoi tower = new TowerOfHanoi();
         tower.printTowerOfHanoiSolution(3, 11, 12, 13);
+
+        MaxOfArray max = new MaxOfArray();
+        int maxValue = max.maxOfArray(new int[] {22,33,4,5,78,9}, 0);
+        System.out.println("Max of an array is : " + maxValue);
     }
 }
