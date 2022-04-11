@@ -109,5 +109,9 @@ public class Main {
 
         AddToArrayFormOfInteger addArray = new AddToArrayFormOfInteger();
         System.out.println("After adding number to array : " + addArray.addToArrayForm(new int[] {2,1,3}, 816));
+
+        ReshapeTheMatrix reshape = new ReshapeTheMatrix();
+        int[][] reshapedMatrix = reshape.matrixReshape(new int[][] {{1,2},{3,4}}, 4, 1);
+        System.out.println("Matrix after reshaping : " + Arrays.deepToString(reshapedMatrix));
     }
 }
