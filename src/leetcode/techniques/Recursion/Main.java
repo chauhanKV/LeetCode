@@ -29,5 +29,11 @@ public class Main {
         MaxOfArray max = new MaxOfArray();
         int maxValue = max.maxOfArray(new int[] {22,33,4,5,78,9}, 0);
         System.out.println("Max of an array is : " + maxValue);
+
+        FindFirstIndex firstIndex = new FindFirstIndex();
+        System.out.println("First index of given number after using recursion is : " + firstIndex.firstIndex(new int[]{2, 3, 4,5, 3, 7, 8, 4}, 0, 4));
+
+        FindLastIndex lastIndex = new FindLastIndex();
+        System.out.println("Last index of given number after using recursion is : " + lastIndex.lastIndex(new int[]{2, 3, 4,5, 3, 7, 8, 4}, 0, 4));
     }
 }
