@@ -113,5 +113,9 @@ public class Main {
         ReshapeTheMatrix reshape = new ReshapeTheMatrix();
         int[][] reshapedMatrix = reshape.matrixReshape(new int[][] {{1,2},{3,4}}, 4, 1);
         System.out.println("Matrix after reshaping : " + Arrays.deepToString(reshapedMatrix));
+
+        PlusOne one = new PlusOne();
+        int[] result1 = one.plusOne(new int[] {1,2,3,4,5});
+        System.out.println("After Plus one : " + Arrays.toString(result1));
     }
 }
