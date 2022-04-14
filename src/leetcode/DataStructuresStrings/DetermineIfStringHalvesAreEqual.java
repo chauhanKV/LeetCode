@@ -1,11 +1,9 @@
 package leetcode.DataStructuresStrings;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class DetermineIfStringHalvesAreEqual {
-
-    // Gives wrong answer for below test case :
-    // "gfLpdQfBhLSNWKBvRWpNlRWTSMQYTSyPFTwWHptvnJHFWQDQLdYyHzKJjYrpHbNQyPFWpKhChZXsvYfPBVMpRSfLZwHMBqsbPhZBhwfmjDqgXVkZrtyXbpXWVLRnpGPWjvKNHmxqxPSlvxxsxsnbQvKJDwKtWgFDrjsgvTScXYPsMBgkWktkdthwsQdCpddrgksxlZMYDcPyvMLqztnYGQbrKcKPWqtjdklXZBvNbZfNdNRmbDGpxybGdzghpSmGvmZGpJlfwTbLhQXZSfgSJTNvrQGdWyQgJjngKLXNpkMtFWgpcrYHZHJdgDfmkfplDYjWRmBNyFNzgGbRcGBQXWcskPpXPlBkdsVwRMNZCLvkdXwDrlcTTNPPMvjPChWHQPJMPSLSzQLlkQWrmLLnknVdWKrYZRymTQTRDbsgtFjZQjMNdrZVqQdBdywVqSWkkHHmbrwnlzXwYCpbfJSxBPdwDjKQFgYPChQWdJTHRVYRDrLtswMnTNQCjZNsqZBpXjZxWKblqZFxtZgHCjYsbqJZFjQJZlFptgMXVDykQpHlmPzxpKnQNtYDJNhHZkMLVCXJjgRGYwCbNGmkqgRkYjzpBMJHRLkbsgXpMkMWCDncmGXBxzZsSrGshcYKClqTyZPcGBJthqXjVlJWNYtPgXkFQSxXxGwsvbgPQQZQfllFfQbXMCkqXtTxDlSkgBGfVSSfWCwbzgFnLlMKLQgccrQSyxRyqyXvCzCBGdzPhxLnvJMyDhpWXWNFXwcwHCCMsccvrxbtsjcThqsLMrgkxlLLGKCbtdHqvBKjxlmntDrvCKxwpMrWZycsvDjCRjPXQPZxmvHnxGWpBqkJCkcqfmyRHPSgGxxkHgSLXNsfVxQRwbftyCxvzHrCzXKXfghSwTMpDzBhmjXLdxFCfpSggVkTVFPQTJCrCwfyVLNQGSLJKVRKtHCwHMNyclLNHHZTzbLJdtkQRzrPVgXSLhJKVZlqYVzPsmwZYPmqKhQC"
 
     // Time complexity : O(N)
     // Space Complexity : O(V + 2S) => V => number of vowels in small and upper case | S => the strings separated to 2 halves. => Total SC : O(1)
@@ -52,11 +50,35 @@ public class DetermineIfStringHalvesAreEqual {
             }
         }
 
-        if(s1Counter == 0 && s2Counter == 0)
-        {
-            return false;
-        }
-
         return s1Counter == s2Counter;
     }
+
+    // Optimized approach
+    // Time complexity : O(N)
+    // Space Complexity : O(V) => V = vowels
+    public boolean halvesAreAlikeOptimized(String s) {
+        int left = 0, right = s.length() - 1, counter = 0;
+
+        var vowels = Set.of('a','e','i','o','u','A','E','I','O','U');
+
+        while(left < right)
+        {
+            if(vowels.contains(s.charAt(left)))
+            {
+                counter++;
+            }
+
+            if(vowels.contains(s.charAt(right)))
+            {
+                counter--;
+            }
+
+            left++;
+            right--;
+        }
+
+        return counter == 0;
+    }
+
+
 }
