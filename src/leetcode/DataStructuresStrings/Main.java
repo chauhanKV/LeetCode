@@ -20,5 +20,8 @@ public class Main {
 
         DetermineIfStringHalvesAreEqual halvesAreEqual = new DetermineIfStringHalvesAreEqual();
         System.out.println("Determine if string halves are equal : "+ halvesAreEqual.halvesAreAlike("textbook"));
+
+        DecryptString decryptString = new DecryptString();
+        System.out.println("String after decryption : " + decryptString.freqAlphabets("10#20#12"));
     }
 }
