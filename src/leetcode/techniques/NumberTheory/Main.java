@@ -133,5 +133,8 @@ public class Main {
         SubSetOfArray subSet = new SubSetOfArray();
         List<List<Integer>> subSets = subSet.subsets(new int[]{10, 20, 30});
         System.out.println("Subset of an Array are / Power Set : " + Arrays.toString(subSets.toArray()));
+
+        ConvertToTitleExcel excel = new ConvertToTitleExcel();
+        System.out.println("Excel sheet column number is : " + excel.convertToTitle(6234));
     }
 }
