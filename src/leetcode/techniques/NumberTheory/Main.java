@@ -136,5 +136,8 @@ public class Main {
 
         ConvertToTitleExcel excel = new ConvertToTitleExcel();
         System.out.println("Excel sheet column number is : " + excel.convertToTitle(6234));
+
+        MinimumCostToMoveChips moveChips = new MinimumCostToMoveChips();
+        System.out.println("Minimum cost to move chips to same position : " + moveChips.minCostToMoveChips(new int[] {2,2,2,3,3,4,4,4}));
     }
 }
