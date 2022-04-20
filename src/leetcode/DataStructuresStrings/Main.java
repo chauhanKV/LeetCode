@@ -23,5 +23,8 @@ public class Main {
 
         DecryptString decryptString = new DecryptString();
         System.out.println("String after decryption : " + decryptString.freqAlphabets("10#20#12"));
+
+        ReversePrefixOfWord prefixOfWord = new ReversePrefixOfWord();
+        System.out.println("Reversed Prefix of a word : " + prefixOfWord.reversePrefix("abcdefd", 'd'));
     }
 }
