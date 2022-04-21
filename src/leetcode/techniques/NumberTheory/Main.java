@@ -139,5 +139,8 @@ public class Main {
 
         MinimumCostToMoveChips moveChips = new MinimumCostToMoveChips();
         System.out.println("Minimum cost to move chips to same position : " + moveChips.minCostToMoveChips(new int[] {2,2,2,3,3,4,4,4}));
+
+        MaximumProductOfThreeNumbers maxProduct = new MaximumProductOfThreeNumbers();
+        System.out.println("Maximum Product of Tnree numbers is : " + maxProduct.maximumProduct(new int[] {1,2,3,4}));
     }
 }
