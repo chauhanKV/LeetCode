@@ -16,17 +16,14 @@ public class BinarySearchWithRecursion {
         return result;
     }
 
-    private int recursionSearch(int[] nums, int target, int start, int end)
-    {
+    private int recursionSearch(int[] nums, int target, int start, int end) {
         int mid = (start + end) / 2;
 
-        if(nums[mid] == target)
-        {
+        if (nums[mid] == target) {
             return mid;
         }
 
-        if(start > end)
-        {
+        if (start > end) {
             return -1;
         }
 

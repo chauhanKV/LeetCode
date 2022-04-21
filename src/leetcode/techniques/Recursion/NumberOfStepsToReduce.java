@@ -15,19 +15,14 @@ public class NumberOfStepsToReduce {
         return noOfSteps(num, 1);
     }
 
-    private int noOfSteps(int num , int counter)
-    {
-        if(num == 0)
-        {
+    private int noOfSteps(int num , int counter) {
+        if (num == 0) {
             return num;
         }
 
-        if(num % 2 == 0)
-        {
+        if (num % 2 == 0) {
             counter += noOfSteps(num / 2, counter);
-        }
-        else
-        {
+        } else {
             counter += noOfSteps(num - 1, counter);
         }
 

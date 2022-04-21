@@ -1,13 +1,10 @@
 package leetcode.techniques.Recursion;
 
 public class PowerLinear {
-    public int power(int x, int n){
-        if(n == 0)
-        {
+    public int power(int x, int n) {
+        if (n == 0) {
             return 1;
-        }
-        else
-        {
+        } else {
             return x * power(x, n - 1);
         }
     }
