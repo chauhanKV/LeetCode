@@ -142,5 +142,8 @@ public class Main {
 
         MaximumProductOfThreeNumbers maxProduct = new MaximumProductOfThreeNumbers();
         System.out.println("Maximum Product of Tnree numbers is : " + maxProduct.maximumProduct(new int[] {1,2,3,4}));
+
+        DetermineColorOfaChessBoardSquare determineColor = new DetermineColorOfaChessBoardSquare();
+        System.out.println("Color of Given coordinate is in chessboard is : " + determineColor.squareIsWhite("h2"));
     }
 }
