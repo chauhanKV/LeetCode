@@ -35,5 +35,8 @@ public class Main {
 
         FindLastIndex lastIndex = new FindLastIndex();
         System.out.println("Last index of given number after using recursion is : " + lastIndex.lastIndex(new int[]{2, 3, 4, 5, 3, 7, 8, 4}, 0, 4));
+
+        CountOperationsToZero zero = new CountOperationsToZero();
+        System.out.println("Count number of operations to return to zero using recursion : " + zero.countOperations(5, 7));
     }
 }
