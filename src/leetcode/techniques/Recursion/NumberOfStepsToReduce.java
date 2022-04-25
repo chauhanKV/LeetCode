@@ -28,4 +28,25 @@ public class NumberOfStepsToReduce {
 
         return counter;
     }
+
+    // More Optimized Approach
+    // Returning the counter itself once the base condition is met.
+    // Used the concept of adding a return statement for recursion call inside the body when the method itself is returning.
+    // Learned in Kunal Kushwaha's recursion video.
+
+    public int numberOfStepsOptimized(int num) {
+        return noOfStepsOptimized(num, 0);
+    }
+
+    private int noOfStepsOptimized(int num , int counter) {
+        if (num == 0) {
+            return counter;
+        }
+
+        if (num % 2 == 0) {
+            return noOfStepsOptimized(num / 2, ++counter);
+        } else {
+            return noOfStepsOptimized(num - 1, ++counter);
+        }
+    }
 }
