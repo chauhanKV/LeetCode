@@ -19,12 +19,15 @@ public class Main {
         System.out.println("Longest Palindromic String : " + longPalindrome);
 
         DetermineIfStringHalvesAreEqual halvesAreEqual = new DetermineIfStringHalvesAreEqual();
-        System.out.println("Determine if string halves are equal : "+ halvesAreEqual.halvesAreAlike("textbook"));
+        System.out.println("Determine if string halves are equal : " + halvesAreEqual.halvesAreAlike("textbook"));
 
         DecryptString decryptString = new DecryptString();
         System.out.println("String after decryption : " + decryptString.freqAlphabets("10#20#12"));
 
         ReversePrefixOfWord prefixOfWord = new ReversePrefixOfWord();
         System.out.println("Reversed Prefix of a word : " + prefixOfWord.reversePrefix("abcdefd", 'd'));
+
+        LongPressedName pressedName = new LongPressedName();
+        System.out.println("Is name correctly typed ? : " + pressedName.isLongPressedName("alex", "aaleex"));
     }
 }
