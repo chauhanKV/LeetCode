@@ -38,5 +38,14 @@ public class Main {
 
         CountOperationsToZero zero = new CountOperationsToZero();
         System.out.println("Count number of operations to return to zero using recursion : " + zero.countOperations(5, 7));
+
+        CheckIfArrayIsSorted checkArray = new CheckIfArrayIsSorted();
+        System.out.println("Check whether the given Array is sorted using Recursion : " + checkArray.checkIfArraySorted(new int[]{1,2,3,4,5}));
+        System.out.println("Check whether the given Array is sorted using Recursion : " + checkArray.checkIfArraySorted(new int[]{1,2,8,4,5}));
+
+        LinearSearchUsingRecursion linear = new LinearSearchUsingRecursion();
+        System.out.println("Linear search index of target using recursion : " + linear.SearchIndex(new int[] {1,2,3,4,5}, 4));
+
+        System.out.println("Multiple occurances of target using recursion : " + linear.SearchMultipleOccurnances(new int[] {1,2,3,4,4,5,6}, 4));
     }
 }
