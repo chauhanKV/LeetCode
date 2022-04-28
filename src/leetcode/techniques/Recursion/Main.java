@@ -1,5 +1,7 @@
 package leetcode.techniques.Recursion;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         BinarySearchWithRecursion recursionSearch = new BinarySearchWithRecursion();
@@ -46,9 +48,12 @@ public class Main {
         LinearSearchUsingRecursion linear = new LinearSearchUsingRecursion();
         System.out.println("Linear search index of target using recursion : " + linear.SearchIndex(new int[]{1, 2, 3, 4, 5}, 4));
 
-        System.out.println("Multiple occurances of target using recursion : " + linear.SearchMultipleOccurnances(new int[]{1, 2, 3, 4, 4, 5, 6}, 4));
+        System.out.println("Multiple occurrences of target using recursion : " + linear.SearchMultipleOccurnances(new int[]{1, 2, 3, 4, 4, 5, 6}, 4));
 
         BinarySearchInRotatedArray rotatedArray = new BinarySearchInRotatedArray();
         System.out.println("Search index of the target using Binary Search and Recursion : " + rotatedArray.search(new int[]{5, 6, 7, 8, 9, 1, 2, 3}, 0));
+
+        AllIndicesOfArray indices = new AllIndicesOfArray();
+        System.out.println("Indices of occurrences using array are : " + Arrays.toString(indices.returnAllIndicesInArray(new int[]{1, 2, 3, 4, 5, 4, 6, 7}, 4)));
     }
 }
