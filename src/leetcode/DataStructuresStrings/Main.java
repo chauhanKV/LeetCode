@@ -29,5 +29,8 @@ public class Main {
 
         LongPressedName pressedName = new LongPressedName();
         System.out.println("Is name correctly typed ? : " + pressedName.isLongPressedName("alex", "aaleex"));
+
+        MergeStringAlternately alternately = new MergeStringAlternately();
+        System.out.println("String after merging alternately looks like : " + alternately.mergeAlternately("abc","pqrstw"));
     }
 }
