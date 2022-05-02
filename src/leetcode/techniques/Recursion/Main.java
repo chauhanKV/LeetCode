@@ -55,5 +55,19 @@ public class Main {
 
         AllIndicesOfArray indices = new AllIndicesOfArray();
         System.out.println("Indices of occurrences using array are : " + Arrays.toString(indices.returnAllIndicesInArray(new int[]{1, 2, 3, 4, 5, 4, 6, 7}, 4)));
+
+        PrintTriangle printTriangle = new PrintTriangle();
+        System.out.println("Triangle printed in inverted format using recursion : ");
+        printTriangle.reverseTriangle(4, 0);
+
+        System.out.println("Triangle print in normal format using recursion : ");
+        printTriangle.normalTriangle(4, 0);
+        System.out.println();
+
+        SortArrayUsingBubbleSortRecursion sort = new SortArrayUsingBubbleSortRecursion();
+        sort.sortArrayAscending(new int[] {5,4,3,2,1});
+
+        MoveAllZeros move = new MoveAllZeros();
+        move.moveZeroes(new int[]{0,1,0,3,12});
     }
 }
