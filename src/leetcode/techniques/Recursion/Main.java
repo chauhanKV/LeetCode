@@ -69,5 +69,8 @@ public class Main {
 
         MoveAllZeros move = new MoveAllZeros();
         move.moveZeroes(new int[]{0,1,0,3,12});
+
+        SelectionSortWithRecursion selection = new SelectionSortWithRecursion();
+        selection.selectionSortArray(new int[] {4,3,2,8,1});
     }
 }
