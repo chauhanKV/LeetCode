@@ -65,12 +65,19 @@ public class Main {
         System.out.println();
 
         SortArrayUsingBubbleSortRecursion sort = new SortArrayUsingBubbleSortRecursion();
-        sort.sortArrayAscending(new int[] {5,4,3,2,1});
+        sort.sortArrayAscending(new int[]{5, 4, 3, 2, 1});
 
         MoveAllZeros move = new MoveAllZeros();
-        move.moveZeroes(new int[]{0,1,0,3,12});
+        move.moveZeroes(new int[]{0, 1, 0, 3, 12});
 
         SelectionSortWithRecursion selection = new SelectionSortWithRecursion();
-        selection.selectionSortArray(new int[] {4,3,2,8,1});
+        selection.selectionSortArray(new int[]{4, 3, 2, 8, 1});
+
+        FindMinimumInRotatedSortedArray array1 = new FindMinimumInRotatedSortedArray();
+        System.out.println("Minimum in rotated sorted array using Binary Search Recursion is : " + array1.findMin(new int[]{3, 1, 2}));
+
+        FindMinimumInRotatedSortedArray2 array2 = new FindMinimumInRotatedSortedArray2();
+        array2.findMin(new int[]{3, 1});
+        System.out.println("Minimum in rotated sorted array having duplicate using Binary Search Recursion is : " + array2.findMin(new int[]{3, 1}));
     }
 }
