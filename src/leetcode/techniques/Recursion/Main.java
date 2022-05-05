@@ -79,5 +79,11 @@ public class Main {
         FindMinimumInRotatedSortedArray2 array2 = new FindMinimumInRotatedSortedArray2();
         array2.findMin(new int[]{3, 1});
         System.out.println("Minimum in rotated sorted array having duplicate using Binary Search Recursion is : " + array2.findMin(new int[]{3, 1}));
+
+        MergeSortArrayUsingRecursion sortRecursion = new MergeSortArrayUsingRecursion();
+        int[] sortedArray = sortRecursion.MergeSortArrayUsingRecursionWithSpace(new int[] {6,12,8,3,0,45,19,32,4});
+        System.out.println("Merge Sort using Recursion : " + Arrays.toString(sortedArray));
+
+        sortRecursion.MergeSortArrayUsingRecursionInPlace(new int[] {6,12,8,3,0,45,19,32,4});
     }
 }
