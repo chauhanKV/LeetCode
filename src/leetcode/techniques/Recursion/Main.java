@@ -1,5 +1,7 @@
 package leetcode.techniques.Recursion;
 
+import leetcode.techniques.Sorting.MergeArrays;
+
 import java.util.Arrays;
 
 public class Main {
@@ -77,7 +79,7 @@ public class Main {
         System.out.println("Minimum in rotated sorted array using Binary Search Recursion is : " + array1.findMin(new int[]{3, 1, 2}));
 
         FindMinimumInRotatedSortedArray2 array2 = new FindMinimumInRotatedSortedArray2();
-        array2.findMin(new int[]{3, 1});
+        array2.findMin(new int[]{2,2,2,0,1});
         System.out.println("Minimum in rotated sorted array having duplicate using Binary Search Recursion is : " + array2.findMin(new int[]{3, 1}));
 
         MergeSortArrayUsingRecursion sortRecursion = new MergeSortArrayUsingRecursion();
