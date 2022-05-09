@@ -2,6 +2,7 @@ package leetcode.techniques.Recursion;
 
 import leetcode.techniques.Sorting.MergeArrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -87,5 +88,10 @@ public class Main {
         System.out.println("Merge Sort using Recursion : " + Arrays.toString(sortedArray));
 
         sortRecursion.MergeSortArrayUsingRecursionInPlace(new int[] {6,12,8,3,0,45,19,32,4});
+
+        // Subsequence questions using Recursion
+        GetSubsequence subsequence = new GetSubsequence();
+        ArrayList<String> result = subsequence.getAllSubsequences("abc");
+        System.out.println("All subsequences of the given string are : " + result);
     }
 }
