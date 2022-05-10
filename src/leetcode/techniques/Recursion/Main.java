@@ -94,6 +94,11 @@ public class Main {
         ArrayList<String> result = subsequence.getAllSubsequences("abc");
         System.out.println("All subsequences of the given string are : " + result);
 
+        IsSubsequence isSub = new IsSubsequence();
+        System.out.println("Is the given string value subsequence of the string ? : " + isSub.isSubsequence("abc", "ahbgdc"));
+
+        System.out.println("Is the given string value subsequence of the string (with recursion logic) ? : " + isSub.isSubsequenceWithRecursion("abc", "ahbgdc"));
+
         // QuickSort
         QuickSortUsingRecursion quick = new QuickSortUsingRecursion();
         quick.sortArrayUsingQuickSort(new int[]{1,4,5,3,2,6,7,0});
