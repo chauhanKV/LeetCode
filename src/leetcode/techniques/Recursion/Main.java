@@ -93,5 +93,9 @@ public class Main {
         GetSubsequence subsequence = new GetSubsequence();
         ArrayList<String> result = subsequence.getAllSubsequences("abc");
         System.out.println("All subsequences of the given string are : " + result);
+
+        // QuickSort
+        QuickSortUsingRecursion quick = new QuickSortUsingRecursion();
+        quick.sortArrayUsingQuickSort(new int[]{1,4,5,3,2,6,7,0});
     }
 }
