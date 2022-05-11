@@ -15,7 +15,7 @@ public class GetSubsequence {
 
         Character ch = str.charAt(0);
         String newStr = str.substring(1);
-        // Go deep into recursion until no value is left the given string
+        // Go deep into recursion until no value is left in the given string
         ArrayList<String> sub = getAllSubsequences(newStr);
 
         // While returning from base condition - start creating substring result.
@@ -31,5 +31,29 @@ public class GetSubsequence {
         }
 
         return result;
+    }
+
+    // Kunal's subset pattern
+
+    public void getAllSubsequencesUsingSubsetPattern(String content)
+    {
+        System.out.println("Subsequences using Subset Pattern taught by Kunal : ");
+        subsequences("", content);
+        System.out.println();
+    }
+
+    private void subsequences(String p, String up)
+    {
+        // base condition
+        if(up.isEmpty())
+        {
+            System.out.print(p + " ");
+            return;
+        }
+
+        char ch = up.charAt(0);
+
+        subsequences(p + ch , up.substring(1));
+        subsequences(p , up.substring(1));
     }
 }
