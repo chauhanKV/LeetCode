@@ -32,5 +32,8 @@ public class Main {
 
         MergeStringAlternately alternately = new MergeStringAlternately();
         System.out.println("String after merging alternately looks like : " + alternately.mergeAlternately("abc","pqrstw"));
+
+        NumberOfMatchingSubsequences matchingSubsequences = new NumberOfMatchingSubsequences();
+        System.out.println("Number of matching Subsequences are : " + matchingSubsequences.numMatchingSubseq("abcde", new String[] {"a","bb","acd","ace"}));
     }
 }
