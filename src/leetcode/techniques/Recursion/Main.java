@@ -4,6 +4,7 @@ import leetcode.techniques.Sorting.MergeArrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -104,5 +105,9 @@ public class Main {
         // QuickSort
         QuickSortUsingRecursion quick = new QuickSortUsingRecursion();
         quick.sortArrayUsingQuickSort(new int[]{1,4,5,3,2,6,7,0});
+
+        LetterCombinationOfPhoneNumber combination = new LetterCombinationOfPhoneNumber();
+        List<String> str = combination.letterCombinations("57");
+        System.out.println("List of combinations : " + str);
     }
 }
