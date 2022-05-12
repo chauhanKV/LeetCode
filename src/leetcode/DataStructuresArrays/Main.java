@@ -98,24 +98,28 @@ public class Main {
         System.out.println("Array list after prime number removal : " + Arrays.toString(primeRemoved.toArray()));
 
         FindEvenNumberOfDigits digits = new FindEvenNumberOfDigits();
-        System.out.println("Count of digits with even numbers : " + digits.findNumbers(new int[] {12,345,2,6,7896}));
+        System.out.println("Count of digits with even numbers : " + digits.findNumbers(new int[]{12, 345, 2, 6, 7896}));
 
         FlippingImage flipImg = new FlippingImage();
-        System.out.println("Image after flipping looks like : " + Arrays.deepToString(flipImg.flipAndInvertImage(new int[][] {{1,1,0,0}, {1,0,0,1}, {0,1,1,1}, {1,0,1,0}})));
+        System.out.println("Image after flipping looks like : " + Arrays.deepToString(flipImg.flipAndInvertImage(new int[][]{{1, 1, 0, 0}, {1, 0, 0, 1}, {0, 1, 1, 1}, {1, 0, 1, 0}})));
 
         MatrixDiagonalSum diagonalSum = new MatrixDiagonalSum();
         int sum = diagonalSum.diagonalSum(new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {10, 11, 12, 13}, {14, 15, 16, 17}});
         System.out.println("Matrix Diagonal sum is : " + sum);
 
         AddToArrayFormOfInteger addArray = new AddToArrayFormOfInteger();
-        System.out.println("After adding number to array : " + addArray.addToArrayForm(new int[] {2,1,3}, 816));
+        System.out.println("After adding number to array : " + addArray.addToArrayForm(new int[]{2, 1, 3}, 816));
 
         ReshapeTheMatrix reshape = new ReshapeTheMatrix();
-        int[][] reshapedMatrix = reshape.matrixReshape(new int[][] {{1,2},{3,4}}, 4, 1);
+        int[][] reshapedMatrix = reshape.matrixReshape(new int[][]{{1, 2}, {3, 4}}, 4, 1);
         System.out.println("Matrix after reshaping : " + Arrays.deepToString(reshapedMatrix));
 
         PlusOne one = new PlusOne();
-        int[] result1 = one.plusOne(new int[] {1,2,3,4,5});
+        int[] result1 = one.plusOne(new int[]{1, 2, 3, 4, 5});
         System.out.println("After Plus one : " + Arrays.toString(result1));
+
+        SubSets subsets = new SubSets();
+        subsets.printAllSubsets(new int[]{1, 2, 3});
+        subsets.printSubsetsWithoutDuplicates(new int[]{1, 2, 2, 3, 4, 4, 5});
     }
 }
