@@ -4,41 +4,65 @@ import java.util.Arrays;
 
 public class FindMinimumInRotatedSortedArray2 {
 
-    //Gives wrong answer of some test cases - Fix the solution.
+    //Runtime: 1 ms, faster than 67.89% of Java online submissions for Find Minimum in Rotated Sorted Array II.
+    //Memory Usage: 43.8 MB, less than 32.97% of Java online submissions for Find Minimum in Rotated Sorted Array II.
+    //Next challenges:
+    //Find the Town Judge
+    //Count the Number of Consistent Strings
+    //Maximum Total Beauty of the Gardens
 
     // TC : O(Log N)
     // SC : O(Log N)
 
+    // Understand the intuition - this one is tricky.
     public int findMin(int[] nums) {
-        return findMinValue(nums, 0, nums.length - 1, 0);
+        return findMinValue(nums, 0, nums.length - 1);
     }
 
-    private int findMinValue(int[] nums, int start, int end, int minIndex) {
+    private int findMinValue(int[] nums, int start, int end) {
         // Base Condition
         if (start >= end) {
-            return Math.min(nums[minIndex], nums[start]);
+            return nums[start];
+        }
+
+        int mid = start + (end - start) / 2;
+
+        if (nums[mid] > nums[end]) {
+            return findMinValue(nums, mid + 1, end);
+        } else if (nums[mid] < nums[start]) {
+            return findMinValue(nums, start + 1, mid);
+        } else {
+            return findMinValue(nums, start, end - 1);
+        }
+    }
+
+
+    // Does not work for all test cases - need to check optimized solution.
+    private int findMinValueTemp(int[] nums, int start, int end, int minIndex) {
+        // Base Condition
+        if (start >= end) {
+            return nums[minIndex] > nums[start] ? nums[start] : nums[minIndex];
         }
 
         int mid = (start + end) / 2;
 
         // HAndles duplicates
         if (nums[start] == nums[mid] && nums[end] == nums[mid]) {
-            return findMinValue(nums, start + 1, end - 1, minIndex);
+            return findMinValueTemp(nums, start + 1, end - 1, minIndex);
         } else if (nums[start] < nums[mid]) {
             // Increasing Order
             if (nums[minIndex] > nums[start]) {
-                return findMinValue(nums, mid + 1, end, start);
+                return findMinValueTemp(nums, mid + 1, end, start);
             } else {
-                return findMinValue(nums, mid + 1, end, minIndex);
+                return findMinValueTemp(nums, mid + 1, end, minIndex);
             }
         } else {
             // Decreasing Order
             if (nums[minIndex] > nums[mid]) {
-                return findMinValue(nums, mid + 1, end, mid);
+                return findMinValueTemp(nums, start, mid - 1, mid);
             } else {
-                return findMinValue(nums, mid + 1, end, minIndex);
+                return findMinValueTemp(nums, mid + 1, mid, minIndex);
             }
-
         }
     }
 }
