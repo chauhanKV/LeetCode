@@ -102,7 +102,7 @@ public class Main {
 
         System.out.println("Is the given string value subsequence of the string (with recursion logic) ? : " + isSub.isSubsequenceWithRecursion("abc", "ahbgdc"));
 
-        // QuickSort
+        // QuickSort Algorithm
         QuickSortUsingRecursion quick = new QuickSortUsingRecursion();
         quick.sortArrayUsingQuickSort(new int[]{1,4,5,3,2,6,7,0});
 
