@@ -109,5 +109,8 @@ public class Main {
         LetterCombinationOfPhoneNumber combination = new LetterCombinationOfPhoneNumber();
         List<String> str = combination.letterCombinations("57");
         System.out.println("List of combinations : " + str);
+
+        Power pw = new Power();
+        System.out.println("Power of given number without using Math.pow is : " + pw.myPow(6, 3));
     }
 }
