@@ -112,5 +112,8 @@ public class Main {
 
         Power pw = new Power();
         System.out.println("Power of given number without using Math.pow is : " + pw.myPow(6, 3));
+
+        Permutation permutation = new Permutation();
+        permutation.printPermutations("", "abc");
     }
 }
