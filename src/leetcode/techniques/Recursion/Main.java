@@ -114,6 +114,9 @@ public class Main {
         System.out.println("Power of given number without using Math.pow is : " + pw.myPow(6, 3));
 
         Permutation permutation = new Permutation();
+        // Permutation of any string is factorial of given string Length
         permutation.printPermutations("", "abc");
+        System.out.println("Printing all permutation of string using ArrayList : " + permutation.printPermutationList("", "abcd"));
+        System.out.println("Count of permutation in a string is : " + permutation.printPermutationCount("", "abcdef"));
     }
 }
