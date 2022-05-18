@@ -118,5 +118,11 @@ public class Main {
         permutation.printPermutations("", "abc");
         System.out.println("Printing all permutation of string using ArrayList : " + permutation.printPermutationList("", "abcd"));
         System.out.println("Count of permutation in a string is : " + permutation.printPermutationCount("", "abcdef"));
+
+        ClimbingStairsCombinations combinations = new ClimbingStairsCombinations();
+        System.out.println("Climbing stairs combinations for a given number are : " + combinations.climbingStairsCombination(5));
+
+        ClimbingStairsCount combinationCount = new ClimbingStairsCount();
+        System.out.println("Climbing Stairs combination count for a given number is : " + combinationCount.climbStairs(41));
     }
 }
