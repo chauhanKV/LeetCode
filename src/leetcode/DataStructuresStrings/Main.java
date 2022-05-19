@@ -31,9 +31,14 @@ public class Main {
         System.out.println("Is name correctly typed ? : " + pressedName.isLongPressedName("alex", "aaleex"));
 
         MergeStringAlternately alternately = new MergeStringAlternately();
-        System.out.println("String after merging alternately looks like : " + alternately.mergeAlternately("abc","pqrstw"));
+        System.out.println("String after merging alternately looks like : " + alternately.mergeAlternately("abc", "pqrstw"));
 
         NumberOfMatchingSubsequences matchingSubsequences = new NumberOfMatchingSubsequences();
-        System.out.println("Number of matching Subsequences are : " + matchingSubsequences.numMatchingSubseq("abcde", new String[] {"a","bb","acd","ace"}));
+        System.out.println("Number of matching Subsequences are : " + matchingSubsequences.numMatchingSubseq("abcde", new String[]{"a", "bb", "acd", "ace"}));
+
+        AddingSpacesToAString spaces = new AddingSpacesToAString();
+        System.out.println("String after adding spaces is : " + spaces.addSpaces("LeetcodeHelpsMeLearn", new int[]{8, 13, 15}));
+
     }
+
 }
