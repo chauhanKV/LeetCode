@@ -124,5 +124,8 @@ public class Main {
 
         ClimbingStairsCount combinationCount = new ClimbingStairsCount();
         System.out.println("Climbing Stairs combination count for a given number is : " + combinationCount.climbStairs(41));
+
+        MazePaths paths = new MazePaths();
+        System.out.println("Maze paths for given matrix dimension are " + paths.getMazePaths(1,1, 3,3));
     }
 }
