@@ -25,7 +25,7 @@ public class LetterCombinationOfPhoneNumber {
     private List<String> letterCombinationOfPhoneNumber(String digits, String[] codes) {
         // Base Condition
         if (digits.isEmpty()) {
-            List<String> bresult = new ArrayList<String>();
+            List<String> bresult = new ArrayList<>();
             bresult.add("");
             return bresult;
         }
@@ -34,7 +34,7 @@ public class LetterCombinationOfPhoneNumber {
         String remaining = digits.substring(1);
 
         List<String> recursionResult = letterCombinationOfPhoneNumber(remaining, codes);
-        List<String> mainResult = new ArrayList<String>();
+        List<String> mainResult = new ArrayList<>();
 
         String codeValue = codes[ch - '0'];
         for (int i = 0; i < codeValue.length(); i++) {
@@ -44,5 +44,32 @@ public class LetterCombinationOfPhoneNumber {
         }
 
         return mainResult;
+    }
+
+    public List<String> letterCombinationsUsingKunalApproach(String digits) {
+        return letterCombUsingKunalApproach("", digits);
+    }
+
+    // Do it considering 1 does not have any letters, this solution works when 1 has 2 letters starting from a
+    private List<String> letterCombUsingKunalApproach(String processed, String unprocessed)
+    {
+        // base condition
+        if(unprocessed.isEmpty())
+        {
+            ArrayList<String> baseResult = new ArrayList<>();
+            baseResult.add(processed);
+            return baseResult;
+        }
+
+        ArrayList<String> result = new ArrayList<>();
+
+        int digit = unprocessed.charAt(0) - '0';
+
+        for(int i = (digit - 1) * 3 ; i < digit * 3; i++)
+        {
+            char ch = (char) ('a' + i);
+            result.addAll(letterCombUsingKunalApproach(processed + ch , unprocessed.substring(1)));
+        }
+        return result;
     }
 }
