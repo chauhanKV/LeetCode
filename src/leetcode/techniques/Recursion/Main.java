@@ -110,6 +110,9 @@ public class Main {
         List<String> str = combination.letterCombinations("57");
         System.out.println("List of combinations : " + str);
 
+        List<String> str1 = combination.letterCombinationsUsingKunalApproach("57");
+        System.out.println("List of combinations of pressed number using Kunal's approach is : " + str1);
+
         Power pw = new Power();
         System.out.println("Power of given number without using Math.pow is : " + pw.myPow(6, 3));
 
@@ -127,5 +130,8 @@ public class Main {
 
         MazePaths paths = new MazePaths();
         System.out.println("Maze paths for given matrix dimension are " + paths.getMazePaths(1,1, 3,3));
+
+        NumberOfDiceRolls dice = new NumberOfDiceRolls();
+        System.out.println("Count of possibility of Number of dice rolls that sum up to target is : " + dice.numRollsToTarget(2, 6, 4));
     }
 }
