@@ -133,5 +133,9 @@ public class Main {
 
         NumberOfDiceRolls dice = new NumberOfDiceRolls();
         System.out.println("Count of possibility of Number of dice rolls that sum up to target is : " + dice.numRollsToTarget(2, 6, 4));
+
+        UniquePaths uniquePaths = new UniquePaths();
+        //uniquePaths.uniquePaths(3,7);
+        System.out.println("Number of unique Paths are : " + uniquePaths.uniquePaths(3,7));
     }
 }
