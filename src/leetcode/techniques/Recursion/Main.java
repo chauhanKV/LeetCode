@@ -135,8 +135,14 @@ public class Main {
         System.out.println("Count of possibility of Number of dice rolls that sum up to target is : " + dice.numRollsToTarget(2, 6, 4));
 
         UniquePaths uniquePaths = new UniquePaths();
-        //uniquePaths.uniquePaths(3,7);
         System.out.println("Number of unique Paths are : " + uniquePaths.uniquePaths(3,7));
         System.out.println("Number of unique Paths with reduced recursion call : " + uniquePaths.uniquePathsReducedRecursion(3,3));
+        System.out.println("Unique Paths are : " + uniquePaths.printUniquePaths(3,3));
+        System.out.println("Printing Unique paths including Diagonal path : " + uniquePaths.printUniquePathsDiagonally(3,3));
+        boolean[][] arr = new boolean[][] {{true, true, true}, {true, false, true},{true, true, true}};
+        System.out.print("Print unique paths with obstacle : ");
+        uniquePaths.printPathWithObstacle(arr);
+        int[][] obstacles = new int[][] {{0,0,0},{0,1,0},{0,0,0}};
+        System.out.println("Print count of paths with Obstacle : " + uniquePaths.countUniquePathsWithObstacles(obstacles));
     }
 }
