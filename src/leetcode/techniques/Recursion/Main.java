@@ -144,5 +144,11 @@ public class Main {
         uniquePaths.printPathWithObstacle(arr);
         int[][] obstacles = new int[][] {{0,0,0},{0,1,0},{0,0,0}};
         System.out.println("Print count of paths with Obstacle : " + uniquePaths.countUniquePathsWithObstacles(obstacles));
+        boolean[][] inputArray = new boolean[][] {{true, true, true},{true, true, true},{true, true, true}};
+        System.out.println("BACKTRACKING - All possible paths in all direction without repeating the same path are :");
+        uniquePaths.printAllPossiblePathsInAllDirections(inputArray);
+
+        SquareRoot sqRt = new SquareRoot();
+        System.out.println("Square root using Newton Raphson method + Recursion : " + sqRt.findSquareRootUsingNewtonRaphson(427));
     }
 }

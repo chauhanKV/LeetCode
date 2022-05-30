@@ -155,9 +155,56 @@ public class UniquePaths {
         if (col < maze[0].length - 1) {
             count += countPathsWithObstacles(maze, row, col + 1);
         }
-
         return count;
+    }
 
+
+    // Backtracking
+    // Print all paths (down, left, right, up)
+
+    public void printAllPossiblePathsInAllDirections(boolean[][] maze)
+    {
+        printAllPossiblePaths(maze,"",0, 0);
+    }
+
+    private void printAllPossiblePaths(boolean[][] maze, String processed, int row, int col) {
+        // base condition
+        if(row == maze.length - 1 && col == maze[0].length - 1)
+        {
+            System.out.println(processed);
+            return;
+        }
+
+        // Return when the cell is already visited
+        if(!maze[row][col])
+        {
+            return;
+        }
+
+        // This block means that I am visiting this cell to make my path to destination.
+        maze[row][col] = false;
+
+        if(row < maze.length - 1)
+        {
+            printAllPossiblePaths(maze, "D" + processed, row + 1, col);
+        }
+
+        if(col < maze[0].length - 1)
+        {
+            printAllPossiblePaths(maze, "R" + processed, row, col + 1);
+        }
+
+        if(row > 0)
+        {
+            printAllPossiblePaths(maze, "U" + processed, row - 1, col);
+        }
+
+        if(col > 0)
+        {
+            printAllPossiblePaths(maze, "L" + processed, row , col - 1);
+        }
+
+        maze[row][col] = true;
     }
 
 }
