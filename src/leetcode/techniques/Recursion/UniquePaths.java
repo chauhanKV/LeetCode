@@ -2,6 +2,7 @@ package leetcode.techniques.Recursion;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class UniquePaths {
     public int uniquePaths(int m, int n) {
@@ -205,6 +206,62 @@ public class UniquePaths {
         }
 
         maze[row][col] = true;
+    }
+
+
+    // Backtracking - Print path and print the steps in Matrix
+
+    public void printAllPathsInMatrix(boolean[][] maze)
+    {
+        int[][] path = new int[maze.length][maze[0].length];
+        printAllPathsInMatrixInAllDirection(maze,"",0, 0, path, 1);
+    }
+
+    private void printAllPathsInMatrixInAllDirection(boolean[][] maze, String processed, int row, int col, int[][] path, int step) {
+        // base condition
+        if(row == maze.length - 1 && col == maze[0].length - 1)
+        {
+            for(int[] c : path)
+            {
+                System.out.println(Arrays.toString(c));
+            }
+            System.out.println(processed);
+            System.out.println();
+            return;
+        }
+
+        // Return when the cell is already visited
+        if(!maze[row][col])
+        {
+            return;
+        }
+
+        // This block means that I am visiting this cell to make my path to destination.
+        maze[row][col] = false;
+        path[row][col] = step;
+
+        if(row < maze.length - 1)
+        {
+            printAllPathsInMatrixInAllDirection(maze, "D" + processed, row + 1, col, path, step + 1);
+        }
+
+        if(col < maze[0].length - 1)
+        {
+            printAllPathsInMatrixInAllDirection(maze, "R" + processed, row, col + 1, path, step + 1);
+        }
+
+        if(row > 0)
+        {
+            printAllPathsInMatrixInAllDirection(maze, "U" + processed, row - 1, col, path, step + 1);
+        }
+
+        if(col > 0)
+        {
+            printAllPathsInMatrixInAllDirection(maze, "L" + processed, row , col - 1, path, step + 1);
+        }
+
+        maze[row][col] = true;
+        path[row][col] = 0;
     }
 
 }

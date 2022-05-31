@@ -147,6 +147,12 @@ public class Main {
         boolean[][] inputArray = new boolean[][] {{true, true, true},{true, true, true},{true, true, true}};
         System.out.println("BACKTRACKING - All possible paths in all direction without repeating the same path are :");
         uniquePaths.printAllPossiblePathsInAllDirections(inputArray);
+        System.out.println("BACKTRACKING : Print all paths in matrix and string format : ");
+        uniquePaths.printAllPathsInMatrix(inputArray);
+
+        MinimumPathSum minPath = new MinimumPathSum();
+        int minPathValue = minPath.minPathSum(new int[][] {{1,2},{1,1}});
+        System.out.println("Path with minimum sum value in a matrix is : " + minPathValue);
 
         SquareRoot sqRt = new SquareRoot();
         System.out.println("Square root using Newton Raphson method + Recursion : " + sqRt.findSquareRootUsingNewtonRaphson(427));
