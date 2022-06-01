@@ -133,6 +133,7 @@ public class UniquePaths {
 
 
     // Print count of paths after adding obstacles
+    // Gives TLE for bigger Test cases on leetcode, find optimized solution.
     public int countUniquePathsWithObstacles(int[][] obstacleGrid) {
         return countPathsWithObstacles(obstacleGrid, 0, 0);
     }
@@ -157,6 +158,47 @@ public class UniquePaths {
             count += countPathsWithObstacles(maze, row, col + 1);
         }
         return count;
+    }
+
+    // Above solution optimized using Dynamic Programming approach
+    // Have back for intuition
+
+    //Runtime: 1 ms, faster than 53.01% of Java online submissions for Unique Paths II.
+    //Memory Usage: 41.5 MB, less than 76.42% of Java online submissions for Unique Paths II.
+    //Next challenges:
+    //Unique Paths
+    //Unique Paths III
+
+    int[][] dp;
+    public int uniquePathsWithObstaclesDP(int[][] obstacleGrid) {
+        dp = new int[obstacleGrid.length][obstacleGrid[0].length];
+        for(int i = 0 ; i < obstacleGrid.length; i++)
+        {
+            for(int j = 0; j < obstacleGrid[0].length; j++)
+            {
+                dp[i][j] = -1;
+            }
+        }
+        return countPathsWithObstaclesDP(obstacleGrid, 0, 0);
+    }
+
+    private int countPathsWithObstaclesDP(int[][] maze, int row, int col) {
+        // base condition
+        if (row == maze.length - 1 && col == maze[0].length - 1 && maze[row][col] != 1) {
+            return 1;
+        }
+
+        if (row >= maze.length || col >= maze[0].length || maze[row][col] == 1) {
+            return 0;
+        }
+
+        if (dp[row][col] != -1) {
+            return dp[row][col];
+        }
+
+        dp[row][col] = countPathsWithObstaclesDP(maze, row + 1, col) + countPathsWithObstaclesDP(maze, row, col + 1);
+
+        return dp[row][col];
     }
 
 

@@ -149,6 +149,8 @@ public class Main {
         uniquePaths.printAllPossiblePathsInAllDirections(inputArray);
         System.out.println("BACKTRACKING : Print all paths in matrix and string format : ");
         uniquePaths.printAllPathsInMatrix(inputArray);
+        // Optimized using DP
+        System.out.println("Paths count with Obstacles using DP for huge test cases : " + uniquePaths.uniquePathsWithObstaclesDP(obstacles));
 
         MinimumPathSum minPath = new MinimumPathSum();
         int minPathValue = minPath.minPathSum(new int[][] {{1,2},{1,1}});
@@ -156,5 +158,8 @@ public class Main {
 
         SquareRoot sqRt = new SquareRoot();
         System.out.println("Square root using Newton Raphson method + Recursion : " + sqRt.findSquareRootUsingNewtonRaphson(427));
+
+//        MazePathsWithJumps jumps = new MazePathsWithJumps();
+//        System.out.println("Maze Path with Jumps are : " + jumps.getMazePathWithJumps(4,4));
     }
 }
