@@ -159,7 +159,7 @@ public class Main {
         SquareRoot sqRt = new SquareRoot();
         System.out.println("Square root using Newton Raphson method + Recursion : " + sqRt.findSquareRootUsingNewtonRaphson(427));
 
-//        MazePathsWithJumps jumps = new MazePathsWithJumps();
-//        System.out.println("Maze Path with Jumps are : " + jumps.getMazePathWithJumps(4,4));
+        MazePathsWithJumps jumps = new MazePathsWithJumps();
+        System.out.println("Maze Path with Jumps are : " + jumps.getMazePathWithJumps(4,4));
     }
 }
