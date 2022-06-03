@@ -161,5 +161,9 @@ public class Main {
 
         MazePathsWithJumps jumps = new MazePathsWithJumps();
         System.out.println("Maze Path with Jumps are : " + jumps.getMazePathWithJumps(4,4));
+
+        PrintEncodings print = new PrintEncodings();
+        System.out.print("Encoding value of the number is : ");
+        print.printAllEncodings("123");
     }
 }
