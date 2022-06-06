@@ -165,5 +165,12 @@ public class Main {
         PrintEncodings print = new PrintEncodings();
         System.out.print("Encoding value of the number is : ");
         print.printAllEncodings("123");
+
+        FloodFillNados floodNados = new FloodFillNados();
+        floodNados.floodFillRecursion(new int[][]{{0,0,0},{1,0,1},{0,0,0}});
+
+        FloodFillLeetCode floodLeetCode = new FloodFillLeetCode();
+        int[][] floodResult = floodLeetCode.floodFill(new int[][]{{1,1,1},{1,1,0},{1,0,1}}, 1,1, 2);
+        System.out.println("Flood Fill LeetCode result : " + Arrays.deepToString(floodResult));
     }
 }
