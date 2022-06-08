@@ -81,14 +81,14 @@ public class Main {
         System.out.println("Minimum in rotated sorted array using Binary Search Recursion is : " + array1.findMin(new int[]{3, 1, 2}));
 
         FindMinimumInRotatedSortedArray2 array2 = new FindMinimumInRotatedSortedArray2();
-        array2.findMin(new int[]{2,2,2,0,1});
+        array2.findMin(new int[]{2, 2, 2, 0, 1});
         System.out.println("Minimum in rotated sorted array having duplicate using Binary Search Recursion is : " + array2.findMin(new int[]{3, 1}));
 
         MergeSortArrayUsingRecursion sortRecursion = new MergeSortArrayUsingRecursion();
-        int[] sortedArray = sortRecursion.MergeSortArrayUsingRecursionWithSpace(new int[] {6,12,8,3,0,45,19,32,4});
+        int[] sortedArray = sortRecursion.MergeSortArrayUsingRecursionWithSpace(new int[]{6, 12, 8, 3, 0, 45, 19, 32, 4});
         System.out.println("Merge Sort using Recursion : " + Arrays.toString(sortedArray));
 
-        sortRecursion.MergeSortArrayUsingRecursionInPlace(new int[] {6,12,8,3,0,45,19,32,4});
+        sortRecursion.MergeSortArrayUsingRecursionInPlace(new int[]{6, 12, 8, 3, 0, 45, 19, 32, 4});
 
         // Subsequence questions using Recursion
         GetSubsequence subsequence = new GetSubsequence();
@@ -104,7 +104,7 @@ public class Main {
 
         // QuickSort Algorithm
         QuickSortUsingRecursion quick = new QuickSortUsingRecursion();
-        quick.sortArrayUsingQuickSort(new int[]{1,4,5,3,2,6,7,0});
+        quick.sortArrayUsingQuickSort(new int[]{1, 4, 5, 3, 2, 6, 7, 0});
 
         LetterCombinationOfPhoneNumber combination = new LetterCombinationOfPhoneNumber();
         List<String> str = combination.letterCombinations("57");
@@ -129,22 +129,22 @@ public class Main {
         System.out.println("Climbing Stairs combination count for a given number is : " + combinationCount.climbStairs(41));
 
         MazePaths paths = new MazePaths();
-        System.out.println("Maze paths for given matrix dimension are " + paths.getMazePaths(1,1, 3,3));
+        System.out.println("Maze paths for given matrix dimension are " + paths.getMazePaths(1, 1, 3, 3));
 
         NumberOfDiceRolls dice = new NumberOfDiceRolls();
         System.out.println("Count of possibility of Number of dice rolls that sum up to target is : " + dice.numRollsToTarget(2, 6, 4));
 
         UniquePaths uniquePaths = new UniquePaths();
-        System.out.println("Number of unique Paths are : " + uniquePaths.uniquePaths(3,7));
-        System.out.println("Number of unique Paths with reduced recursion call : " + uniquePaths.uniquePathsReducedRecursion(3,3));
-        System.out.println("Unique Paths are : " + uniquePaths.printUniquePaths(3,3));
-        System.out.println("Printing Unique paths including Diagonal path : " + uniquePaths.printUniquePathsDiagonally(3,3));
-        boolean[][] arr = new boolean[][] {{true, true, true}, {true, false, true},{true, true, true}};
+        System.out.println("Number of unique Paths are : " + uniquePaths.uniquePaths(3, 7));
+        System.out.println("Number of unique Paths with reduced recursion call : " + uniquePaths.uniquePathsReducedRecursion(3, 3));
+        System.out.println("Unique Paths are : " + uniquePaths.printUniquePaths(3, 3));
+        System.out.println("Printing Unique paths including Diagonal path : " + uniquePaths.printUniquePathsDiagonally(3, 3));
+        boolean[][] arr = new boolean[][]{{true, true, true}, {true, false, true}, {true, true, true}};
         System.out.print("Print unique paths with obstacle : ");
         uniquePaths.printPathWithObstacle(arr);
-        int[][] obstacles = new int[][] {{0,0,0},{0,1,0},{0,0,0}};
+        int[][] obstacles = new int[][]{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
         System.out.println("Print count of paths with Obstacle : " + uniquePaths.countUniquePathsWithObstacles(obstacles));
-        boolean[][] inputArray = new boolean[][] {{true, true, true},{true, true, true},{true, true, true}};
+        boolean[][] inputArray = new boolean[][]{{true, true, true}, {true, true, true}, {true, true, true}};
         System.out.println("BACKTRACKING - All possible paths in all direction without repeating the same path are :");
         uniquePaths.printAllPossiblePathsInAllDirections(inputArray);
         System.out.println("BACKTRACKING : Print all paths in matrix and string format : ");
@@ -153,24 +153,28 @@ public class Main {
         System.out.println("Paths count with Obstacles using DP for huge test cases : " + uniquePaths.uniquePathsWithObstaclesDP(obstacles));
 
         MinimumPathSum minPath = new MinimumPathSum();
-        int minPathValue = minPath.minPathSum(new int[][] {{1,2},{1,1}});
+        int minPathValue = minPath.minPathSum(new int[][]{{1, 2}, {1, 1}});
         System.out.println("Path with minimum sum value in a matrix is : " + minPathValue);
 
         SquareRoot sqRt = new SquareRoot();
         System.out.println("Square root using Newton Raphson method + Recursion : " + sqRt.findSquareRootUsingNewtonRaphson(427));
 
         MazePathsWithJumps jumps = new MazePathsWithJumps();
-        System.out.println("Maze Path with Jumps are : " + jumps.getMazePathWithJumps(4,4));
+        System.out.println("Maze Path with Jumps are : " + jumps.getMazePathWithJumps(4, 4));
 
         PrintEncodings print = new PrintEncodings();
         System.out.print("Encoding value of the number is : ");
         print.printAllEncodings("123");
 
         FloodFillNados floodNados = new FloodFillNados();
-        floodNados.floodFillRecursion(new int[][]{{0,0,0},{1,0,1},{0,0,0}});
+        floodNados.floodFillRecursion(new int[][]{{0, 0, 0}, {1, 0, 1}, {0, 0, 0}});
 
         FloodFillLeetCode floodLeetCode = new FloodFillLeetCode();
-        int[][] floodResult = floodLeetCode.floodFill(new int[][]{{1,1,1},{1,1,0},{1,0,1}}, 1,1, 2);
+        int[][] floodResult = floodLeetCode.floodFill(new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2);
         System.out.println("Flood Fill LeetCode result : " + Arrays.deepToString(floodResult));
+
+        IslandPerimeter perimeter = new IslandPerimeter();
+        int perimeterValue = perimeter.islandPerimeter(new int[][]{{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0}});
+        System.out.println("Perimeter of Island is : " + perimeterValue);
     }
 }
