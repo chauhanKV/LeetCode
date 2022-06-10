@@ -176,5 +176,9 @@ public class Main {
         IslandPerimeter perimeter = new IslandPerimeter();
         int perimeterValue = perimeter.islandPerimeter(new int[][]{{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0}});
         System.out.println("Perimeter of Island is : " + perimeterValue);
+
+        CombinationSum combinationSum = new CombinationSum();
+        List<List<Integer>> subsetCombination = combinationSum.combinationSum(new int[]{2,3,6,7}, 7);
+        System.out.println("Combination Sum : " + subsetCombination);
     }
 }
