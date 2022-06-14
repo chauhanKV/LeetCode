@@ -23,12 +23,14 @@ public class CombinationSum {
         // base condition
 
         // - ----------------------------------------------
-        // Why this base condition is different than target sum subset question of Nados ?
+        // If we find the possibility where the subset values are equal to the target we add them to the result.
         if (sum == target) {
             result.add(new ArrayList<>(subList));
             return;
         }
 
+        // Otherwise, we return that function as is.
+        // there are two possibilities of base condition - found the list or no - we have to return in both the cases.
         if (arrayCounter >= candidates.length || sum > target)
             return;
         // ------------------------------------------------
@@ -37,11 +39,13 @@ public class CombinationSum {
 
         // Here we are taking it
         subList.add(value);
-        // Understand this -> why arrayCounter is not incremented ?
+        // The reason why array Counter is not incremented in this call is because we need to check if current value when duplicated in sublist can
+        // sum up to the target.
         combinationSumHelper(candidates, target, sum + value, arrayCounter, subList, result);
 
         // Here we are not taking it
         subList.remove(subList.size() - 1);
+        // Here we are incrementing the arrayCounter to check the possibility of next value if summed to be equal to the target.
         combinationSumHelper(candidates, target, sum, arrayCounter + 1, subList, result);
     }
 }
