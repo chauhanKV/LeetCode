@@ -185,6 +185,10 @@ public class Main {
         System.out.println("Target Sum Subset are : ");
         subSubSet.printTargetSumSubsets(new int[]{10,20,30}, 0, "", 0, 30);
 
+        CombinationSumII combinationSumII = new CombinationSumII();
+        List<List<Integer>> result2 = combinationSumII.combinationSum2(new int[] {10,1,2,7,6,1,5}, 8);
+        System.out.println("Combination Sum II : " + result2);
+
         System.out.println();
     }
 }
