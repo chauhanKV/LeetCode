@@ -44,6 +44,35 @@ public class CombinationSumII {
 
     }
 
+    // This is more optimized where we are not making recursion calls when the value becomes greater than target. We are breaking the loop
+    // From TakeUForward
+
+    private void combinationSum2HelperOptimized(int[] candidates, int remainder, ArrayList<Integer> subList, List<List<Integer>> result, int start) {
+        // Base condition
+        if (remainder == 0) {
+            result.add(new ArrayList<>(subList));
+            return;
+        }
+
+
+        for(int i = start; i < candidates.length; i++)
+        {
+            // Check for duplicates
+            if (i > start && candidates[i] == candidates[i - 1]) continue;
+            // Break if value is greater than target, no need to go ahead in sorted array as
+            // all the values after this are going to be greater
+            if(candidates[i] > remainder) break;
+
+            // Here we take the value
+            subList.add(candidates[i]);
+            combinationSum2HelperOptimized(candidates, remainder - candidates[i], subList, result, i + 1);
+
+            // Here we do not take the value
+            subList.remove(subList.size() - 1);
+        }
+
+    }
+
 
     // Gives wrong answer
     // The solution should not include duplicate entries.
