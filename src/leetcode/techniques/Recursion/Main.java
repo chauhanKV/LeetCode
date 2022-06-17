@@ -189,6 +189,12 @@ public class Main {
         List<List<Integer>> result2 = combinationSumII.combinationSum2(new int[] {10,1,2,7,6,1,5}, 8);
         System.out.println("Combination Sum II : " + result2);
 
-        System.out.println();
+        SubSets sets = new SubSets();
+        List<List<Integer>> resultSubset1 = sets.subsets(new int[] {1,2,3});
+        System.out.println("All Subsets(Power Set) of given array are : " + resultSubset1);
+
+        SubSetsII setsII = new SubSetsII();
+        List<List<Integer>> resultSubset2  = setsII.subsetsWithDup(new int[] {1,2,2});
+        System.out.println("All Subsets(Power Set) of given array are without duplicates are : " + resultSubset2);
     }
 }
