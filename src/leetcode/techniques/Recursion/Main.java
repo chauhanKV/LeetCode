@@ -196,5 +196,8 @@ public class Main {
         SubSetsII setsII = new SubSetsII();
         List<List<Integer>> resultSubset2  = setsII.subsetsWithDup(new int[] {1,2,2});
         System.out.println("All Subsets(Power Set) of given array are without duplicates are : " + resultSubset2);
+
+        Permutations permutations = new Permutations();
+        System.out.println("Permutation using subset method are : " + permutations.permute(new int[] {1,2,3}));
     }
 }
