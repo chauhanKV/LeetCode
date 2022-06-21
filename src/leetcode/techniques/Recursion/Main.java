@@ -199,5 +199,9 @@ public class Main {
 
         Permutations permutations = new Permutations();
         System.out.println("Permutation using subset method are : " + permutations.permute(new int[] {1,2,3}));
+
+        PermutationsII permutationsII = new PermutationsII();
+        List<List<Integer>> permuteIIResult = permutationsII.permuteUnique(new int[] {3,3,0,3});
+        System.out.println("Permutation II results : " + permuteIIResult);
     }
 }
