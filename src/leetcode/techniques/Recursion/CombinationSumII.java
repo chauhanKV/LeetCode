@@ -47,6 +47,12 @@ public class CombinationSumII {
     // This is more optimized where we are not making recursion calls when the value becomes greater than target. We are breaking the loop
     // From TakeUForward
 
+    //Runtime: 4 ms, faster than 86.39% of Java online submissions for Combination Sum II.
+    //Memory Usage: 44.2 MB, less than 33.01% of Java online submissions for Combination Sum II.
+    //Next challenges:
+    //Unique Morse Code Words
+    //Number of Lines To Write String
+    //Maximum Units on a Truck
     private void combinationSum2HelperOptimized(int[] candidates, int remainder, ArrayList<Integer> subList, List<List<Integer>> result, int start) {
         // Base condition
         if (remainder == 0) {
