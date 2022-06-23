@@ -39,6 +39,9 @@ public class Main {
         AddingSpacesToAString spaces = new AddingSpacesToAString();
         System.out.println("String after adding spaces is : " + spaces.addSpaces("LeetcodeHelpsMeLearn", new int[]{8, 13, 15}));
 
+        LongestCommonPrefix prefix = new LongestCommonPrefix();
+        System.out.println("Longest Common Prefix : " + prefix.longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
+
     }
 
 }
