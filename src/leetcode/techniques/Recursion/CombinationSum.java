@@ -48,4 +48,41 @@ public class CombinationSum {
         // Here we are incrementing the arrayCounter to check the possibility of next value if summed to be equal to the target.
         combinationSumHelper(candidates, target, sum, arrayCounter + 1, subList, result);
     }
+
+
+    // ----------------------------------Using For loop-----------------------------------------------------
+
+    //Runtime: 8 ms, faster than 40.39% of Java online submissions for Combination Sum.
+    //Memory Usage: 44.7 MB, less than 65.03% of Java online submissions for Combination Sum.
+    //Next challenges:
+    //Combinations
+    //Combination Sum III
+    //Factor Combinations
+    //Combination Sum IV
+    public List<List<Integer>> combinationSumForLoop(int[] candidates, int target) {
+        List<List<Integer>> list = new ArrayList<>();
+        combinationSumForLoopHelper(candidates, target, 0, new ArrayList<>(), list);
+        return list;
+    }
+
+    public void combinationSumForLoopHelper(int[] candidates, int target, int arrayCounter, List<Integer> subList, List<List<Integer>> result) {
+        if (target < 0) {
+            return;
+        }
+
+        // base condition
+        if (target == 0) {
+            result.add(new ArrayList<>(subList));
+            return;
+        }
+
+        for (int i = arrayCounter; i < candidates.length; i++) {
+            subList.add(candidates[i]);
+
+            combinationSumForLoopHelper(candidates, target - candidates[i], i, subList, result);
+
+            subList.remove(subList.size() - 1);
+        }
+    }
+
 }
