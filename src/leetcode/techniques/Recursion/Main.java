@@ -203,5 +203,10 @@ public class Main {
         PermutationsII permutationsII = new PermutationsII();
         List<List<Integer>> permuteIIResult = permutationsII.permuteUnique(new int[] {3,3,0,3});
         System.out.println("Permutation II results : " + permuteIIResult);
+
+        NQueens queens = new NQueens();
+        List<List<String>> queensData = queens.solveNQueens(4);
+        System.out.println("Queens : " + queensData);
+
     }
 }
