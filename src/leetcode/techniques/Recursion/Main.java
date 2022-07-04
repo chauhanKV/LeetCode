@@ -208,5 +208,9 @@ public class Main {
         List<List<String>> queensData = queens.solveNQueens(4);
         System.out.println("Queens : " + queensData);
 
+        NQueensII queensII = new NQueensII();
+        int queensDataII = queensII.totalNQueens(4);
+        System.out.println("Queens Count: " + queensDataII);
+
     }
 }
