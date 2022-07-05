@@ -90,4 +90,45 @@ public class NQueensII {
         }
         return true;
     }
+
+
+    //Runtime: 2 ms, faster than 76.63% of Java online submissions for N-Queens II.
+    //Memory Usage: 38.8 MB, less than 98.06% of Java online submissions for N-Queens II.
+    //Next challenges:
+    //Restore IP Addresses
+    //Sum of All Subset XOR Totals
+    //Maximum Compatibility Score Sum
+
+    // More optimized by removing List<List<Integer>>
+
+    public int totalNQueensOptimized1(int n) {
+        char[][] chessboard = new char[n][n];
+
+        for (int i = 0; i < chessboard.length; i++) {
+            for (int j = 0; j < chessboard[0].length; j++) {
+                chessboard[i][j] = '.';
+            }
+        }
+
+        return solveNQueensHelperOptimized1(chessboard, 0, n);
+    }
+
+    public int solveNQueensHelperOptimized1(char[][] chessboard, int col, int n) {
+        // base condition
+        if (col == n) {
+            return 1;
+        }
+
+        int count = 0;
+        for (int row = 0; row < n; row++) {
+            if (isSafe(chessboard, n, row, col)) // Is safe to place the queen at this location?
+            {
+                chessboard[row][col] = 'Q';
+                count += solveNQueensHelperOptimized1(chessboard, col + 1, n);
+                chessboard[row][col] = '.';
+            }
+        }
+
+        return count;
+    }
 }
