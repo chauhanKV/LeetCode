@@ -212,5 +212,8 @@ public class Main {
         int queensDataII = queensII.totalNQueens(4);
         System.out.println("Queens Count: " + queensDataII);
 
+        ValidPalindrome palindrome = new ValidPalindrome();
+        System.out.println("Is the given string palindrome ? : " + palindrome.isPalindrome("A man, a plan, a canal: Panama"));
+
     }
 }
