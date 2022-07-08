@@ -30,4 +30,32 @@ public class ValidPalindrome {
 
         return isPalindromeHelper(s, start + 1, end - 1, length);
     }
+
+    // Using single variable
+    // Runtime: 853 ms, faster than 22.20% of Java online submissions for Valid Palindrome.
+    //Memory Usage: 54 MB, less than 13.12% of Java online submissions for Valid Palindrome.
+    //Next challenges:
+    //Valid Palindrome II
+    //Maximum Product of the Length of Two Palindromic Subsequences
+    //Find First Palindromic String in the Array
+    //Valid Palindrome IV
+
+    // Not sure why single variable solution is taking more time. Come back to understand this. Check other leetcode solutions on discuss section.
+    // Two pointer solution is much faster than recursion solution.
+    // And we should not use any inbuild function to replace nonalphanumeric characters because that is allocating one more memory location to store
+    // replaced string.
+    public boolean isPalindromeHelperSingleVariable(String s, int i, int length)
+    {
+        if(i >= length/2)
+        {
+            return true;
+        }
+
+        if(s.charAt(i) != s.charAt((length - 1) - i))
+        {
+            return false;
+        }
+
+        return isPalindromeHelperSingleVariable(s, i + 1, length);
+    }
 }
