@@ -85,4 +85,40 @@ public class CombinationSum {
         }
     }
 
+
+    // Runtime: 2 ms, faster than 99.99% of Java online submissions for Combination Sum.
+    //Memory Usage: 42.6 MB, less than 91.77% of Java online submissions for Combination Sum.
+    //Next challenges:
+    //Combinations
+    //Combination Sum III
+    //Factor Combinations
+    //Combination Sum IV
+
+    // TC : O(2^k * N)
+    // SC : O(N)
+    public void combinationSumHelperFasterSolution(int[] candidates, int target, int arrayCounter, List<Integer> subList, List<List<Integer>> result)
+    {
+        if(arrayCounter == candidates.length)
+        {
+            // base condition
+            if (target == 0) {
+                result.add(new ArrayList<>(subList));
+            }
+
+            return;
+        }
+
+        if(candidates[arrayCounter] <= target)
+        {
+            subList.add(candidates[arrayCounter]);
+
+            combinationSumHelperFasterSolution(candidates, target - candidates[arrayCounter], arrayCounter, subList, result);
+
+            subList.remove(subList.size() - 1);
+        }
+
+        combinationSumHelperFasterSolution(candidates, target, arrayCounter + 1, subList, result);
+
+    }
+
 }
