@@ -44,8 +44,6 @@ public class Permutations {
         }
     }
 
-
-
     //Runtime: 2 ms, faster than 72.37% of Java online submissions for Permutations.
     //Memory Usage: 45.2 MB, less than 18.02% of Java online submissions for Permutations.
     //Next challenges:
@@ -74,5 +72,56 @@ public class Permutations {
 
             subSets.remove(subSets.size() - 1);
         }
+    }
+
+
+    //Super Optimized approach
+    //Runtime: 1 ms, faster than 98.16% of Java online submissions for Permutations.
+    //Memory Usage: 42.6 MB, less than 87.45% of Java online submissions for Permutations.
+    //Next challenges:
+    //Next Permutation
+    //Permutation Sequence
+    //Combinations
+
+    // Using the same array store the change in combination and store it in result.
+    // while coming we are changing it to old state for new combinations to come.
+    public List<List<Integer>> permuteSuperOptimized(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+
+        permuteHelperSuperOptimized(nums, 0, result);
+
+        return result;
+    }
+
+    public void permuteHelperSuperOptimized(int[] nums, int index, List<List<Integer>> result)
+    {
+        // base condition
+        if(index == nums.length)
+        {
+            List<Integer> subList = new ArrayList<>();
+            for(int i = 0 ; i < nums.length; i++)
+            {
+                subList.add(nums[i]);
+            }
+
+            result.add(new ArrayList<>(subList));
+            return;
+        }
+
+        for(int i = index; i < nums.length; i++)
+        {
+            swap(index, i, nums);
+            permuteHelperSuperOptimized(nums, index+1, result);
+
+            // while coming back we get back to old state
+            swap(index, i, nums);
+        }
+    }
+
+    public void swap(int index, int i, int[] nums)
+    {
+        int temp = nums[index];
+        nums[index] = nums[i];
+        nums[i] = temp;
     }
 }
