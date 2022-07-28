@@ -178,30 +178,30 @@ public class Main {
         System.out.println("Perimeter of Island is : " + perimeterValue);
 
         CombinationSum combinationSum = new CombinationSum();
-        List<List<Integer>> subsetCombination = combinationSum.combinationSum(new int[]{2,3,6,7}, 7);
+        List<List<Integer>> subsetCombination = combinationSum.combinationSum(new int[]{2, 3, 6, 7}, 7);
         System.out.println("Combination Sum : " + subsetCombination);
 
         TargetSumSubset subSubSet = new TargetSumSubset();
         System.out.println("Target Sum Subset are : ");
-        subSubSet.printTargetSumSubsets(new int[]{10,20,30}, 0, "", 0, 30);
+        subSubSet.printTargetSumSubsets(new int[]{10, 20, 30}, 0, "", 0, 30);
 
         CombinationSumII combinationSumII = new CombinationSumII();
-        List<List<Integer>> result2 = combinationSumII.combinationSum2(new int[] {10,1,2,7,6,1,5}, 8);
+        List<List<Integer>> result2 = combinationSumII.combinationSum2(new int[]{10, 1, 2, 7, 6, 1, 5}, 8);
         System.out.println("Combination Sum II : " + result2);
 
         SubSets sets = new SubSets();
-        List<List<Integer>> resultSubset1 = sets.subsets(new int[] {1,2,3});
+        List<List<Integer>> resultSubset1 = sets.subsets(new int[]{1, 2, 3});
         System.out.println("All Subsets(Power Set) of given array are : " + resultSubset1);
 
         SubSetsII setsII = new SubSetsII();
-        List<List<Integer>> resultSubset2  = setsII.subsetsWithDup(new int[] {1,2,2});
+        List<List<Integer>> resultSubset2 = setsII.subsetsWithDup(new int[]{1, 2, 2});
         System.out.println("All Subsets(Power Set) of given array are without duplicates are : " + resultSubset2);
 
         Permutations permutations = new Permutations();
-        System.out.println("Permutation using subset method are : " + permutations.permute(new int[] {1,2,3}));
+        System.out.println("Permutation using subset method are : " + permutations.permute(new int[]{1, 2, 3}));
 
         PermutationsII permutationsII = new PermutationsII();
-        List<List<Integer>> permuteIIResult = permutationsII.permuteUnique(new int[] {3,3,0,3});
+        List<List<Integer>> permuteIIResult = permutationsII.permuteUnique(new int[]{3, 3, 0, 3});
         System.out.println("Permutation II results : " + permuteIIResult);
 
         NQueens queens = new NQueens();
@@ -214,6 +214,19 @@ public class Main {
 
         ValidPalindrome palindrome = new ValidPalindrome();
         System.out.println("Is the given string palindrome ? : " + palindrome.isPalindrome("A man, a plan, a canal: Panama"));
+
+        SudokuSolver solver = new SudokuSolver();
+        solver.solveSudoku(new char[][]{
+                {'9', '5', '7', '.', '1', '3', '.', '8', '4'},
+                {'4', '8', '3', '.', '5', '7', '1', '.', '6'},
+                {'.', '1', '2', '.', '4', '9', '5', '3', '7'},
+                {'1', '7', '.', '3', '.', '4', '9', '.', '2'},
+                {'5', '.', '4', '9', '7', '.', '3', '6', '.'},
+                {'3', '.', '9', '5', '.', '8', '7', '.', '1'},
+                {'8', '4', '5', '7', '9', '.', '6', '1', '3'},
+                {'.', '9', '1', '.', '3', '6', '.', '7', '5'},
+                {'7', '.', '6', '1', '8', '5', '4', '.', '9'}
+        });
 
     }
 }
