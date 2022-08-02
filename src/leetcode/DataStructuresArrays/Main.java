@@ -121,5 +121,9 @@ public class Main {
         SubSets subsets = new SubSets();
         subsets.printAllSubsets(new int[]{1, 2, 3});
         subsets.printSubsetsWithoutDuplicates(new int[]{1, 2, 2, 3, 4, 4, 5});
+
+        ValidateRowColForAllNumbers validate = new ValidateRowColForAllNumbers();
+        boolean isValid = validate.checkValid(new int[][]{{1,2,3},{3,1,2},{2,3,1}});
+        System.out.println("Check if Every Row and Column Contains All Numbers : " + isValid);
     }
 }
