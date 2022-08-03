@@ -242,5 +242,9 @@ public class Main {
                 {'.', '.', '6', '.', '.', '5', '4', '.', '9'}
         });
         System.out.println("The sudoku is valid : " + isValid);
+
+        CombinationSumIII combinationSumIII = new CombinationSumIII();
+        List<List<Integer>> resultIII = combinationSumIII.combinationSum3(3, 7);
+        System.out.println("Combination Sum III : " + resultIII);
     }
 }
