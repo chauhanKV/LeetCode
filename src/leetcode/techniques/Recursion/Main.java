@@ -246,5 +246,9 @@ public class Main {
         CombinationSumIII combinationSumIII = new CombinationSumIII();
         List<List<Integer>> resultIII = combinationSumIII.combinationSum3(3, 7);
         System.out.println("Combination Sum III : " + resultIII);
+
+        PalindromicPartitioning partitioning = new PalindromicPartitioning();
+        List<List<String>> resultPartition = partitioning.partition("aabbccde");
+        System.out.println("Palindromic Partitioning : " + resultPartition);
     }
 }
