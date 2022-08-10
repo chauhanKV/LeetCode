@@ -250,5 +250,9 @@ public class Main {
         PalindromicPartitioning partitioning = new PalindromicPartitioning();
         List<List<String>> resultPartition = partitioning.partition("aabbccde");
         System.out.println("Palindromic Partitioning : " + resultPartition);
+
+        PalindromePartitionII partitionII = new PalindromePartitionII();
+        int minCut = partitionII.minCut("aaabbbcdefgmadam");
+        System.out.println("Min Cut needed for Palindrome Partitioning are : " + minCut);
     }
 }
