@@ -254,5 +254,9 @@ public class Main {
         PalindromePartitionII partitionII = new PalindromePartitionII();
         int minCut = partitionII.minCut("aaabbbcdefgmadam");
         System.out.println("Min Cut needed for Palindrome Partitioning are : " + minCut);
+
+        CombinationSumIV combinationSumIV = new CombinationSumIV();
+        int combinationIVCount = combinationSumIV.combinationSum4(new int[]{1,2,3}, 32);
+        System.out.println("Combination Sum IV : " + combinationIVCount);
     }
 }
