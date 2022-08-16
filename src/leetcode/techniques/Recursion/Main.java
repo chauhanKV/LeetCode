@@ -258,5 +258,9 @@ public class Main {
         CombinationSumIV combinationSumIV = new CombinationSumIV();
         int combinationIVCount = combinationSumIV.combinationSum4(new int[]{1,2,3}, 32);
         System.out.println("Combination Sum IV : " + combinationIVCount);
+
+        PermutationSequence sequence = new PermutationSequence();
+        String sequenceValue = sequence.getPermutation(4, 17);
+        System.out.println("Kth Permutation Sequence is : " + sequenceValue);
     }
 }
