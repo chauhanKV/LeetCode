@@ -5,6 +5,7 @@ import leetcode.techniques.Sorting.MergeArrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -262,5 +263,17 @@ public class Main {
         PermutationSequence sequence = new PermutationSequence();
         String sequenceValue = sequence.getPermutation(4, 17);
         System.out.println("Kth Permutation Sequence is : " + sequenceValue);
+
+        Stack<Integer> objStack = new Stack<>();
+        objStack.push(1);
+        objStack.push(2);
+        objStack.push(3);
+        objStack.push(4);
+        objStack.push(5);
+        StackOperations op = new StackOperations();
+        op.reverse(objStack);
+
+        KthSymbolGrammar symbol = new KthSymbolGrammar();
+        System.out.println("kth Symbol Grammar : " + symbol.kthGrammar(3, 4));
     }
 }
