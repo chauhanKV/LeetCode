@@ -275,5 +275,11 @@ public class Main {
 
         KthSymbolGrammar symbol = new KthSymbolGrammar();
         System.out.println("kth Symbol Grammar : " + symbol.kthGrammar(3, 4));
+
+        TowerOfHanoi objHanoi = new TowerOfHanoi();
+        objHanoi.solveTowerOfHanoi(3, "Source", "Destination" , "Helper");
+
+        SubsetInputOutPutMethod method = new SubsetInputOutPutMethod();
+        method.printAllSubsets("abc", "");
     }
 }
