@@ -281,5 +281,9 @@ public class Main {
 
         SubsetInputOutPutMethod method = new SubsetInputOutPutMethod();
         method.printAllSubsets("abc", "");
+        System.out.println();
+
+        PermutationWithSpaces permutationWithSpaces = new PermutationWithSpaces();
+        permutationWithSpaces.permutationWithSpaces("ABC", "");
     }
 }
