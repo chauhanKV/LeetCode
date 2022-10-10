@@ -285,5 +285,18 @@ public class Main {
 
         PermutationWithSpaces permutationWithSpaces = new PermutationWithSpaces();
         permutationWithSpaces.permutationWithSpaces("ABC", "");
+
+        ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+        ListNode node = new ListNode();
+        node.add(1);
+        node.add(2);
+        node.add(3);
+        node.add(4);
+        node.add(5);
+        reverseLinkedList.reverseList(node.head);
+
+        LetterCasePermutation permutation2 = new LetterCasePermutation();
+        List<String> str2 = permutation2.letterCasePermutation("a1b2");
+        System.out.println(str2);
     }
 }
