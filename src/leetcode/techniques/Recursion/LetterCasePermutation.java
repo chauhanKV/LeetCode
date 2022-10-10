@@ -3,6 +3,14 @@ package leetcode.techniques.Recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+//Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.
+//Memory Usage: 42.7 MB, less than 70.80% of Java online submissions for Reverse Linked List.
+//Next challenges:
+//Reverse Linked List II
+//Binary Tree Upside Down
+//Reverse Nodes in Even Length Groups
+//Maximum Twin Sum of a Linked List
+
 public class LetterCasePermutation {
     public List<String> letterCasePermutation(String s) {
         List<String> subList = new ArrayList<>();
