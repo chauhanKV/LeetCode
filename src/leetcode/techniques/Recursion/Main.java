@@ -298,5 +298,8 @@ public class Main {
         LetterCasePermutation permutation2 = new LetterCasePermutation();
         List<String> str2 = permutation2.letterCasePermutation("a1b2");
         System.out.println(str2);
+
+        GenerateParenthesis parenthesis = new GenerateParenthesis();
+        System.out.println("Generate All Parenthesis : " + parenthesis.generateParenthesis(4));
     }
 }
