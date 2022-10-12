@@ -301,5 +301,8 @@ public class Main {
 
         GenerateParenthesis parenthesis = new GenerateParenthesis();
         System.out.println("Generate All Parenthesis : " + parenthesis.generateParenthesis(4));
+
+        NBitBinaryMoreOnes binaryMoreOnes = new NBitBinaryMoreOnes();
+        System.out.println(binaryMoreOnes.printBinaryMoreOnes(4));
     }
 }
