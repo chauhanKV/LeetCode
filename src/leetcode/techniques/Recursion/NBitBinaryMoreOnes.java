@@ -21,6 +21,8 @@ public class NBitBinaryMoreOnes {
 
         if(ones == zeros)
         {
+            // Only one branch in this case, so only one recrusion call goes here.
+
             String output1 = output;
             output1 += "1";
             printBinaryMoreOnesHelper(ones + 1, zeros, n - 1, output1, binaryNumbers);
@@ -28,9 +30,15 @@ public class NBitBinaryMoreOnes {
 
         if(ones > zeros)
         {
+            // Two branches in recursion tree , so two recursion call in code
+
             String output2 = output;
             output2 += "0";
             printBinaryMoreOnesHelper(ones, zeros + 1, n - 1, output2, binaryNumbers);
+
+            String output3 = output;
+            output3 += "1";
+            printBinaryMoreOnesHelper(ones + 1, zeros, n - 1, output3, binaryNumbers);
         }
 
         return;
