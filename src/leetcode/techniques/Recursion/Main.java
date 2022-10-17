@@ -304,5 +304,9 @@ public class Main {
 
         NBitBinaryMoreOnes binaryMoreOnes = new NBitBinaryMoreOnes();
         System.out.println(binaryMoreOnes.printBinaryMoreOnes(4));
+
+        WinnerOfCircularGame winner = new WinnerOfCircularGame();
+        int i = winner.findTheWinner(40, 4);
+        System.out.println("Winner of the circular game : " + i);
     }
 }
