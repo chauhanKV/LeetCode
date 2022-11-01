@@ -6,5 +6,9 @@ public class Main {
     public static void main(String[] args) {
         NumberSmallThanCurrent smaller = new NumberSmallThanCurrent();
         System.out.println(Arrays.toString(smaller.smallerNumbersThanCurrent(new int[] {8,0,2,2,4})));
+
+        TwoSum twoSum = new TwoSum();
+        int[] result = twoSum.twoSum(new int[] {2,7,11,15}, 9);
+        System.out.println("Two Sum : " + Arrays.toString(result));
     }
 }
