@@ -8,5 +8,9 @@ public class Main {
 
         int maxProfitWithMemoization = knapSack.knapSackMemoization(3, new int[]{1,2,4}, new int[]{6,7,8}, 3);
         System.out.println("Maximum profile in 0/1 Knapsack Problem with Memoization is : " + maxProfitWithMemoization);
+
+        ZeroOneKnapSackTopDown topDown = new ZeroOneKnapSackTopDown();
+        int maxProfitTopDown = topDown.knapSack(3, new int[]{1,2,4}, new int[]{6,7,8}, 3);
+        System.out.println("0/1 KnapSack with Top Down Approach : " + maxProfitTopDown);
     }
 }
