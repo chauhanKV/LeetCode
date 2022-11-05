@@ -16,5 +16,9 @@ public class Main {
         SubSetSum sum = new SubSetSum();
         boolean isSubsetPresent = sum.isSubsetSum(6, new int[] {3, 34, 4, 12, 5, 2}, 30);
         System.out.println("Is Subset Present ? : " + isSubsetPresent);
+
+        EqualSumPartition equalSum = new EqualSumPartition();
+        int result = equalSum.equalPartition(4, new int[]{1, 5, 11, 5});
+        System.out.println("Equal Sum Partition possible ? " + result);
     }
 }
