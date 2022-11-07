@@ -1,7 +1,13 @@
 package leetcode.techniques.DynamicProgramming;
 
 public class EqualSumPartition {
-    public int equalPartition(int N, int arr[])
+
+    //417. Pacific Atlantic Water Flow
+    //More challenges
+    //698. Partition to K Equal Sum Subsets
+    //1981. Minimize the Difference Between Target and Chosen Elements
+    //2025. Maximum Number of Ways to Partition an Array
+    public int equalPartition(int N, int[] arr)
     {
         int sum = 0;
         // Find sum
@@ -15,7 +21,7 @@ public class EqualSumPartition {
             return 0;
         }
 
-        return isSubsetSum(N, arr, sum) ? 1 : 0;
+        return isSubsetSum(N, arr, sum/2) ? 1 : 0;
     }
 
     public Boolean isSubsetSum(int N, int[] arr, int sum) {
