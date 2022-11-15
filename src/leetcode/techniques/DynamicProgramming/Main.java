@@ -20,5 +20,9 @@ public class Main {
         EqualSumPartition equalSum = new EqualSumPartition();
         int result = equalSum.equalPartition(4, new int[]{1, 5, 11, 5});
         System.out.println("Equal Sum Partition possible ? " + result);
+
+        CountSubsetSum count = new CountSubsetSum();
+        int output = count.perfectSum(new int[] {2, 3, 5, 6, 8, 10}, 6, 10 );
+        System.out.println("Count of subset sum is : " + output);
     }
 }
