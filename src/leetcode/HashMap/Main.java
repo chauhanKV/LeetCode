@@ -10,5 +10,9 @@ public class Main {
         TwoSum twoSum = new TwoSum();
         int[] result = twoSum.twoSum(new int[] {2,7,11,15}, 9);
         System.out.println("Two Sum : " + Arrays.toString(result));
+
+        SubArraySumEqualK equalK = new SubArraySumEqualK();
+        int result1 = equalK.subarraySum(new int[] {1,1,1}, 2);
+        System.out.println("SubArray with Sum equal K (Prefix Sum): " + result1);
     }
 }
