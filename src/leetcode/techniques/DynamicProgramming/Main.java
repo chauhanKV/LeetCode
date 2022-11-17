@@ -24,5 +24,9 @@ public class Main {
         CountSubsetSum count = new CountSubsetSum();
         int output = count.perfectSum(new int[] {2, 3, 5, 6, 8, 10}, 6, 10 );
         System.out.println("Count of subset sum is : " + output);
+
+        MinimumSumPartition partition = new MinimumSumPartition();
+        int resultData = partition.minDifference(new int[]{1, 6, 11, 5}, 4);
+        System.out.println("Minimum Sum Partition is : " + resultData);
     }
 }
