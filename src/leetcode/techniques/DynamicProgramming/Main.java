@@ -28,5 +28,9 @@ public class Main {
         MinimumSumPartition partition = new MinimumSumPartition();
         int resultData = partition.minDifference(new int[]{1, 6, 11, 5}, 4);
         System.out.println("Minimum Sum Partition is : " + resultData);
+
+        PartitionToKEqualSumSubset partitionToKEqualSumSubset = new PartitionToKEqualSumSubset();
+        boolean result1 = partitionToKEqualSumSubset.canPartitionKSubsetsMemoization(new int[] {12,1,2,3,18,2,5,2,11,1}, 3);
+        System.out.println("Partition to K Equal Sum Subset : " + result1);
     }
 }
