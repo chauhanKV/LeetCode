@@ -128,4 +128,85 @@ public class PartitionToKEqualSumSubset {
 
         return false;
     }
+
+
+    // Approach 3 : Memoization + Take it or leave it
+
+    public boolean canPartitionKSubsetsWithTakeitOrLeaveIt(int[] nums, int k) {
+        int sum = 0;
+        int N = nums.length;
+
+        // Get sum of all the values in nums
+        for(int i = 0 ; i < nums.length; i++)
+        {
+            sum += nums[i];
+        }
+
+        if(sum % k != 0)
+        {
+            return false;
+        }
+
+        int[][] dp = new int[N+1][sum+1];
+        for(int i = 0 ; i < N + 1; i++)
+        {
+            for(int j = 0 ; j < sum + 1; j++)
+            {
+                dp[i][j] = -1;
+            }
+        }
+
+        boolean[] visitedIndex = new boolean[N];
+        System.out.println(sum/k);
+        return canPartitionTakeItOrLeaveIt(N, nums, sum/k, 0, 0, k, visitedIndex, dp);
+    }
+
+    public boolean canPartitionTakeItOrLeaveIt(int N, int[] arr, int target, int runningSum, int index, int k, boolean[] visitedIndex, int[][] dp)
+    {
+        // Base Condition
+        if(index >= arr.length)
+        {
+            return false;
+        }
+
+        if(k == 0)
+        {
+            return true;
+        }
+
+        if(runningSum > target)
+        {
+            return false;
+        }
+
+        if(runningSum == target)
+        {
+            for(int i = 0 ; i < N + 1; i++)
+            {
+                for(int j = 0 ; j < target + 1; j++)
+                {
+                    dp[i][j] = -1;
+                }
+            }
+            return canPartitionTakeItOrLeaveIt(N, arr, target, 0, 0, k-1, visitedIndex, dp);
+        }
+
+        if(dp[index][runningSum] != -1)
+        {
+            return dp[index][runningSum] == 1 ? true : false;
+        }
+
+        if(visitedIndex[index]) return false;
+        visitedIndex[index] = true;
+        dp[index][runningSum] = 1;
+
+        if(!canPartitionTakeItOrLeaveIt(N, arr, target, runningSum + arr[index], index + 1, k, visitedIndex, dp))
+        {
+            visitedIndex[index] = false;
+            dp[index][runningSum] = 0;
+
+            canPartitionTakeItOrLeaveIt(N, arr, target, runningSum, index + 1, k, visitedIndex, dp);
+        }
+        return true;
+    }
 }
