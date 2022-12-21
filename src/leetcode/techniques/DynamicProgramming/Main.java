@@ -1,5 +1,7 @@
 package leetcode.techniques.DynamicProgramming;
 
+import leetcode.techniques.Recursion.SubsetInputOutPutMethod;
+
 public class Main {
     public static void main(String[] args) {
         ZeroOneKnapSack knapSack = new ZeroOneKnapSack();
@@ -32,5 +34,9 @@ public class Main {
         PartitionToKEqualSumSubset partitionToKEqualSumSubset = new PartitionToKEqualSumSubset();
         boolean result1 = partitionToKEqualSumSubset.canPartitionKSubsetsMemoization(new int[] {12,1,2,3,18,2,5,2,11,1}, 3);
         System.out.println("Partition to K Equal Sum Subset : " + result1);
+
+        RodCutting rodCutting = new RodCutting();
+        int maxProfit1 = rodCutting.cutRod(new int[] {1, 5, 8, 9, 10, 17, 17, 20}, 8);
+        System.out.println("Rod Cutting : " + maxProfit1);
     }
 }
