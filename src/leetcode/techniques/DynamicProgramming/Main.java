@@ -38,5 +38,9 @@ public class Main {
         RodCutting rodCutting = new RodCutting();
         int maxProfit1 = rodCutting.cutRod(new int[] {1, 5, 8, 9, 10, 17, 17, 20}, 8);
         System.out.println("Rod Cutting : " + maxProfit1);
+
+        CoinChangeII change = new CoinChangeII();
+        int combinations = change.change(5, new int[] {1,2,5});
+        System.out.println("Number of combinations of Coin Change : " + combinations);
     }
 }
