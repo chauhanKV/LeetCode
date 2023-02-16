@@ -42,5 +42,9 @@ public class Main {
         CoinChangeII change = new CoinChangeII();
         int combinations = change.change(5, new int[] {1,2,5});
         System.out.println("Number of combinations of Coin Change : " + combinations);
+
+        CoinChange change1 = new CoinChange();
+        int minCombination = change1.coinChange(new int[] {1,2,5}, 5);
+        System.out.println("Min Number of coin required to calculate sum : " + minCombination);
     }
 }
