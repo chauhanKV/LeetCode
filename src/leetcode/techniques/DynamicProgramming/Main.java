@@ -46,5 +46,9 @@ public class Main {
         CoinChange change1 = new CoinChange();
         int minCombination = change1.coinChange(new int[] {1,2,5}, 5);
         System.out.println("Min Number of coin required to calculate sum : " + minCombination);
+
+        MinimumCostForTickets minimumCostForTickets = new MinimumCostForTickets();
+        int minCost = minimumCostForTickets.mincostTickets(new int[] {1,4,6,7,8,20}, new int[] {2,7,15});
+        System.out.println("Minimum Cost for the Tickets is : " + minCost);
     }
 }
