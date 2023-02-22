@@ -50,5 +50,10 @@ public class Main {
         MinimumCostForTickets minimumCostForTickets = new MinimumCostForTickets();
         int minCost = minimumCostForTickets.mincostTickets(new int[] {1,4,6,7,8,20}, new int[] {2,7,15});
         System.out.println("Minimum Cost for the Tickets is : " + minCost);
+
+        // ------ Longest Common Subsequence -------- //
+        LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
+        int longest = longestCommonSubsequence.longestCommonSubsequence("abcdef", "def");
+        System.out.println("Longest Common Subsequence - " + longest);
     }
 }
