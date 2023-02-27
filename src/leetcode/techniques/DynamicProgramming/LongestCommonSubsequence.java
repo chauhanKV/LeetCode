@@ -65,7 +65,7 @@ public class LongestCommonSubsequence {
 
     // Approach 3 - DP
 
-    public int longestCommonSubsequenceDP(String text1, String text2, int n, int m) {
+    public int longestCommonSubsequenceDP(String text1, String text2, int m, int n) {
         int[][] dp = new int[m + 1][n + 1];
         // Recursive base condition changes to initialization in Top down - DP approach
         for (int i = 0; i < m + 1; i++) {
@@ -80,7 +80,7 @@ public class LongestCommonSubsequence {
         // Choice diagram
         for (int i = 1; i < m + 1; i++) {
             for (int j = 1; j < n + 1; j++) {
-                if (text1.charAt(i) == text2.charAt(j))
+                if (text1.charAt(i-1) == text2.charAt(j-1))
                     dp[i][j] = 1 + dp[i - 1][j - 1];
                 else
                     dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
