@@ -55,5 +55,9 @@ public class Main {
         LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
         int longest = longestCommonSubsequence.longestCommonSubsequence("abcdef", "def");
         System.out.println("Longest Common Subsequence - " + longest);
+
+        LongestCommonSubstring longestCommonSubstring = new LongestCommonSubstring();
+        int longestSubstring = longestCommonSubstring.longestCommonSubstring("abcdef", "def");
+        System.out.println("Longest Common Substring - " + longestSubstring);
     }
 }
