@@ -67,5 +67,10 @@ public class Main {
         shortestCommonSuperSequence shortest = new shortestCommonSuperSequence();
         int supersequence = shortest.shortestCommonSupersequence("abcd","xycd", 4, 4);
         System.out.println("Shortest Common Super Sequence : " + supersequence);
+
+        MinimumNoOfDeletion deletion = new MinimumNoOfDeletion();
+        int deletedDistance = deletion.minDistance("sea", "eat");
+        System.out.println("Minimum Number of Deletion : " + deletedDistance);
+
     }
 }
