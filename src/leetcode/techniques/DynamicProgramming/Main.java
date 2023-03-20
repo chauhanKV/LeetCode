@@ -63,5 +63,9 @@ public class Main {
         // Print longest common subsequence
         PrintLongestCommonSubsequence print = new PrintLongestCommonSubsequence();
         print.printLongestCommonSubstring("adcdsddfghert", "adcdsdfkfgher");
+
+        shortestCommonSuperSequence shortest = new shortestCommonSuperSequence();
+        int supersequence = shortest.shortestCommonSupersequence("abcd","xycd", 4, 4);
+        System.out.println("Shortest Common Super Sequence : " + supersequence);
     }
 }
