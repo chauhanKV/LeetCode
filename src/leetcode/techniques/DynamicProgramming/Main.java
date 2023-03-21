@@ -72,5 +72,8 @@ public class Main {
         int deletedDistance = deletion.minDistance("sea", "eat");
         System.out.println("Minimum Number of Deletion : " + deletedDistance);
 
+        LongestPalindromicSubsequence sub = new LongestPalindromicSubsequence();
+        int subLength = sub.longestPalindromeSubseq("cbbd");
+        System.out.println("Longest Palindromic Subsequence : " + subLength);
     }
 }
