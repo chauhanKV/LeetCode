@@ -62,7 +62,7 @@ public class Main {
 
         // Print longest common subsequence
         PrintLongestCommonSubsequence print = new PrintLongestCommonSubsequence();
-        print.printLongestCommonSubstring("adcdsddfghert", "adcdsdfkfgher");
+        print.shortestCommonSupersequence("adcdsddfghert", "adcdsdfkfgher");
 
         shortestCommonSuperSequence shortest = new shortestCommonSuperSequence();
         int supersequence = shortest.shortestCommonSupersequence("abcd","xycd", 4, 4);
@@ -73,7 +73,7 @@ public class Main {
         System.out.println("Minimum Number of Deletion : " + deletedDistance);
 
         LongestPalindromicSubsequence sub = new LongestPalindromicSubsequence();
-        int subLength = sub.longestPalindromeSubseq("cbbd");
+        int subLength = sub.longestPalindromeSubseq("mbadm");
         System.out.println("Longest Palindromic Subsequence : " + subLength);
     }
 }
