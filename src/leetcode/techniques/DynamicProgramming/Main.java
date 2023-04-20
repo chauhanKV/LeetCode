@@ -75,5 +75,13 @@ public class Main {
         LongestPalindromicSubsequence sub = new LongestPalindromicSubsequence();
         int subLength = sub.longestPalindromeSubseq("mbadm");
         System.out.println("Longest Palindromic Subsequence : " + subLength);
+
+        LongestRepeatingSubsequence repeatingSubsequence = new LongestRepeatingSubsequence();
+        int longestRepeatingSubsequence = repeatingSubsequence.LongestRepeatingSubsequence("aabbedcc");
+        System.out.println("Longest Repeating Subsequence : " + longestRepeatingSubsequence);
+
+        PalindromePartitioningII partitioningII = new PalindromePartitioningII();
+        int minimumPartition = partitioningII.minCut("nitin");
+        System.out.println("Minimum Palindrome Partitioning II : " + minimumPartition);
     }
 }
