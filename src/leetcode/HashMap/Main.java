@@ -14,5 +14,10 @@ public class Main {
         SubArraySumEqualK equalK = new SubArraySumEqualK();
         int result1 = equalK.subarraySum(new int[] {1,1,1}, 2);
         System.out.println("SubArray with Sum equal K (Prefix Sum): " + result1);
+
+        PermutationPalindrome permutationPalindrome = new PermutationPalindrome();
+        boolean result2 = permutationPalindrome.hasPalindromePermutation("aabcbcd");
+        System.out.println("Permutation Palindrome : " + result2);
+
     }
 }
