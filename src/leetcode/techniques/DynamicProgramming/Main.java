@@ -65,7 +65,7 @@ public class Main {
         print.shortestCommonSupersequence("adcdsddfghert", "adcdsdfkfgher");
 
         shortestCommonSuperSequence shortest = new shortestCommonSuperSequence();
-        int supersequence = shortest.shortestCommonSupersequence("abcd","xycd", 4, 4);
+        int supersequence = shortestCommonSuperSequence.shortestCommonSupersequence("abcd","xycd", 4, 4);
         System.out.println("Shortest Common Super Sequence : " + supersequence);
 
         MinimumNoOfDeletion deletion = new MinimumNoOfDeletion();
@@ -83,5 +83,9 @@ public class Main {
         PalindromePartitioningII partitioningII = new PalindromePartitioningII();
         int minimumPartition = partitioningII.minCut("nitin");
         System.out.println("Minimum Palindrome Partitioning II : " + minimumPartition);
+
+        PalindromePartitioningIV partitioningIV = new PalindromePartitioningIV();
+        partitioningIV.checkPartitioning("abcdd");
+
     }
 }

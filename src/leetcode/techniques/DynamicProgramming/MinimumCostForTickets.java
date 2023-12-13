@@ -1,5 +1,7 @@
 package leetcode.techniques.DynamicProgramming;
 
+import java.util.Arrays;
+
 public class MinimumCostForTickets {
 
     // Recursion Approach - 1
@@ -75,21 +77,24 @@ public class MinimumCostForTickets {
             dp[i] = Integer.MAX_VALUE;
         }
         dp[n] = 0;
-
+        // days = [1,4,6,7,8,20]
+        System.out.println(Arrays.toString(dp));
         for (int k = n - 1; k >= 0; k--) {
             // Option 1 - 1 day pass
-            int option1 = costs[0] + dp[k + 1];
+            int option1 = costs[0] + dp[k + 1]; // 2 + 2 = 4
 
             int i;
             // Option 2 - 7 day pass
-            for (i = k; i < n && days[i] < days[k] + 7; i++) ;
-            int option2 = costs[1] + dp[i];
+            for (i = k; i < n && days[i] < days[k] + 7; i++) ; // 5
+            int option2 = costs[1] + dp[i]; // 7 + 2 = 9
 
             // Option 3 - 30 day pass
-            for (i = k; i < n && days[i] < days[k] + 30; i++) ;
-            int option3 = costs[2] + dp[i];
+            for (i = k; i < n && days[i] < days[k] + 30; i++) ; // 6
+            int option3 = costs[2] + dp[i]; // 15 + 0 = 15
 
             dp[k] = Math.min(option1, Math.min(option2, option3));
+            System.out.println(i);
+            System.out.println(Arrays.toString(dp));
         }
         return dp[0];
     }

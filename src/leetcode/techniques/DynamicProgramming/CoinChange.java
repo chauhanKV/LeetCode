@@ -1,6 +1,12 @@
 package leetcode.techniques.DynamicProgramming;
 
 public class CoinChange {
+
+    //323. Number of Connected Components in an Undirected Graph
+    //More challenges
+    //983. Minimum Cost For Tickets
+    //2218. Maximum Value of K Coins From Piles
+    //2224. Minimum Number of Operations to Convert Time
     public int coinChange(int[] coins, int amount) {
         int[][] dp = new int[coins.length + 1][amount + 1];
 

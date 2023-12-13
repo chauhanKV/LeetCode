@@ -22,7 +22,9 @@ public class SubSetSum {
             return false;
         }
 
-        return isSubsetSumHelper(N, arr, target, runningSum + arr[index], index + 1) || isSubsetSumHelper(N, arr, target, runningSum, index + 1);
+        return isSubsetSumHelper(N, arr, target, runningSum + arr[index], index + 1)
+                ||
+                isSubsetSumHelper(N, arr, target, runningSum, index + 1);
 
     }
 
